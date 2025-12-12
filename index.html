@@ -334,7 +334,7 @@
   <main class="z-10 relative bg-black">
     <div id="notification-bar">
       <div id="notificationBanner">
-        <div class="w-full h-full bg-gradient-to-r from-violet-800 to-pink-800 absolute top-0 left-0 -z-20"></div>
+        <div class="w-full h-full bg-gradient-to-r from-blue-800 to-blue-700 absolute top-0 left-0 -z-20"></div>
       </div>
 
       <script src="js/notification-DNNvQdlq.js" crossorigin="anonymous" type="module" fetchpriority="high"
@@ -362,11 +362,11 @@
           <div class="hidden lg:block grow">
             <div class="relative max-w-4xl mx-auto">
               <nav class="mr-16" id="desktop-navbar">
-                <ul class="menu-list flex justify-between">
+                <ul class="menu-list flex justify-center">
                   <li class="with-dropdown">
                     <!-- Nevigation for webpage. Previosly is 入門 -->
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-getting-started-index" href="/zh-TW/getting-started">X Poker</a>
+                      id="header-link-getting-started-index" href="/zh-TW/getting-started">首頁</a>
                     <div class="dropdown dropdown-full">
                       <div class="bg-zinc-900">
                         <div class=" p-4 md:p-8 grid grid-cols-1 md:grid-cols-4 gap-5 gap-y-8 max-w-screen-2xl mx-auto">
@@ -418,7 +418,7 @@
                   </li>
                   <li class="with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-promotions-index" href="/zh-TW/promotions">充值教學</a>
+                      id="header-link-promotions-index" href="/zh-TW/promotions">俱樂部推薦</a>
                     <div class="dropdown dropdown-full">
                       <div class="bg-zinc-900">
                         <a href="/promotions/first-deposit-bonus" id="header-cta-promotions-featured-banner-mobile"
@@ -553,7 +553,7 @@
                   </li>
                   <li class="inline-block with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-tournaments-index" href="/zh-TW/poker/tournaments">俱樂部推薦</a>
+                      id="header-link-tournaments-index" href="/zh-TW/poker/tournaments">出入金教學</a>
 
                     <div class="dropdown dropdown-full">
                       <div class="bg-zinc-900">
@@ -1146,6 +1146,18 @@
 
                     </div>
                   </li>
+                  <li>
+                    <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
+                      href="/zh-TW/games">遊戲種類</a>
+                  </li>
+                  <li>
+                    <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
+                      href="/zh-TW/download">APP下載</a>
+                  </li>
+                  <li>
+                    <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
+                      href="/zh-TW/faq">常見問題</a>
+                  </li>
                   <!-- <li class="inline-block">
         <a class="text-xs xl:text-sm hover:text-gray-300 cursor-pointer" id="header-link-blog" href="/zh-TW/blog">部落格</a>
       </li> -->
@@ -1384,7 +1396,7 @@
 
           <div class="flex items-center gap-2 xl:gap-4">
             <a id="header-cta-download"
-              class="text-sm hidden sm:block font-semibold text-pink-600 hover:text-pink-500 font-semibold"
+              class="text-sm hidden sm:block font-semibold text-blue-600 hover:text-blue-500 font-semibold"
               href="/zh-TW/download">Download</a>
             <a id="header-cta-signup" href="/zh-TW/sign-up">
               <button class="btn btn-primary">註冊</button>
@@ -1512,7 +1524,7 @@
                     </div>
                     <div class="mobile-menu-footer">
                       <a id="header-cta-mobile-download" class="ml-1.5 text-white" href="/zh-TW/download">下載</a>
-                      <a id="header-cta-mobile-login" class="ml-1.5 text-pink-600" href="/zh-TW/login">登入</a>
+                      <a id="header-cta-mobile-login" class="ml-1.5 text-blue-600" href="/zh-TW/login">登入</a>
                     </div>
                   </nav>
 
@@ -2306,15 +2318,16 @@
       </header>
     </section>
 
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- First page of the index -->
 
     <section
-      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-purple blob-r-pink">
+      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
       <div class="flex-1">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight">
           提升你的
-          <span class="block mt-4 text-gradient from-purple-600 via-pink-600 to-orange-600">
+          <span class="block mt-4 text-gradient from-blue-600 via-blue-600 to-blue-600">
             線上撲克體驗
           </span>
         </h2>
@@ -2325,25 +2338,42 @@
           想要找到最適合且優惠最多的X-Poker俱乐部，千萬不要錯過。
         </p>
 
-        <a href="/zh-TW/poker" class="inline-block mt-10">
-          <button
-            class="relative bg-gradient-to-r from-pink-700 to-purple-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
-            俱樂部推薦
-          </button>
-        </a>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="/zh-TW/poker" class="inline-block">
+            <button
+              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              俱樂部推薦
+            </button>
+          </a>
+
+          <a href="/zh-TW/promotions" class="inline-block">
+            <button
+              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              儲值教學
+            </button>
+          </a>
+
+          <a href="/zh-TW/download" class="inline-block">
+            <button
+              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              APP下載
+            </button>
+          </a>
+        </div>
       </div>
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Xpoker_image/PokerXApps.png" alt="X-Poker App Preview"
-          class="max-w-[520px] w-full select-none" />
+        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none" />
       </div>
 
     </section>
+    
     <!-- <section class="container">
+
 This is the block section that maybe i will use later
 
     <div class="text-center">
-      <h2 class="text-5xl text-gradient from-purple-500 to-pink-500 mb-2">歡迎來到Natural8</h2>
+      <h2 class="text-5xl text-gradient from-blue-500 to-blue-500 mb-2">歡迎來到Natural8</h2>
       <p class="text-lg">您正在尋找一個既有趣又安全、公平的線上德州撲克遊戲平台嗎？那就來試試Natural8吧！以下是一些讓您嘗試我們的原因：</p>
     </div>
 
@@ -2378,7 +2408,7 @@ This is the block section that maybe i will use later
 
       <a id="home-link-why-n8-cashback" class="col-span-1 group cursor-pointer relative bg-black hover:bg-zinc-900/70 transition duration-500 border border-zinc-800 hover:border-zinc-500 rounded-md style-none overflow-hidden" href="/zh-TW/promotions/fish-buffet">
         <div class="absolute top-12 left-4 text-center w-full z-0">
-          <div class="bg-opacity-60 bg-gray-100 group-hover:bg-purple-700 h-24 w-24 rounded-full inline-block blur-2xl transform-gpu"></div>
+          <div class="bg-opacity-60 bg-gray-100 group-hover:bg-blue-700 h-24 w-24 rounded-full inline-block blur-2xl transform-gpu"></div>
         </div>
         <div class="h-full p-6 relative text-center z-20">
           <div class="w-full aspect-video flex items-center justify-center relative">
@@ -2395,17 +2425,17 @@ This is the block section that maybe i will use later
     <!-- Using a rectengle block for showing purpose -->
 
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
-    <section class="container mx-auto px-6 py-0 text-white blob-tl-purple blob-r-pink">
+    <section class="container mx-auto px-6 py-0 text-white blob-tl-blue blob-r-blue">
 
       <h2
-        class="text-4xl font-bold text-center mb-12 py-12 from-purple-600 via-pink-600 to-fuchsia-600 animate-bounce-gradient ">
+        class="text-4xl font-bold text-center mb-12 py-12 from-blue-600 via-blue-600 to-blue-600 animate-bounce-gradient ">
         X-POKER 俱樂部推薦排名</h2>
 
       <!-- First (full width) -->
       <div class="border border-gray-500 rounded-2xl p-6 mb-10 bg-black/60 backdrop-blur-sm">
         <div class="bg-black rounded-2xl p-6">
           <p class="text-3xl font-bold text-yellow-400 mb-4">
-            🏆 No.1 寶島聯盟 <span class="text-pink-400 text-xl">（專屬優惠）</span>
+            🏆 No.1 寶島聯盟 <span class="text-blue-400 text-xl">（專屬優惠）</span>
           </p>
 
           <ul class="space-y-2 text-white/90 text-lg leading-relaxed">
@@ -2461,7 +2491,7 @@ This is the block section that maybe i will use later
       <div class="container mt-12 text-center mx-auto">
         <div class="max-w-2xl mx-auto">
           <h2>
-            <span class="text-gradient text-7xl from-purple-600 via-pink-600 to-fuchsia-600 animate-bounce-gradient">
+            <span class="text-gradient text-7xl from-blue-600 via-blue-600 to-blue-600 animate-bounce-gradient">
               X-POKER儲值/買賣幣
             </span>
             <span class="block mt-3">
@@ -2477,7 +2507,7 @@ This is the block section that maybe i will use later
       <div class="container mt-12 text-center mx-auto">
         <div class="mt-12 mx-auto relative w-fit group">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 blur-md opacity-90 animate-pulse-slow group-hover:opacity-100 group-hover:animate-pulse">
+            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-500 blur-md opacity-90 animate-pulse-slow group-hover:opacity-100 group-hover:animate-pulse">
           </div>
           <a class="style-none" href="Attached the hyperlink">
             <button
@@ -2491,7 +2521,7 @@ This is the block section that maybe i will use later
 
     <!-- Poker Apps Games Intro -->
 
-    <section class="bg-black py-24 blob-tl-purple blob-r-pink px-0 **block !block !visible min-h-screen**">
+    <section class="bg-black py-24 blob-tl-blue blob-r-blue px-0 **block !block !visible min-h-screen**">
       <div class="container mx-auto px-4 **!block**">
 
         <h2 class="text-center text-4xl py-16 lg:text-5xl font-bold text-cyan-400 mt-0 mb-16">
@@ -2558,7 +2588,7 @@ This is the block section that maybe i will use later
 
           <div
             class="flex flex-col items-center justify-center text-center p-6 h-48 rounded-2xl bg-black/50 backdrop-blur-sm">
-            <p class="text-xl font-semibold text-pink-400">魷魚遊戲</p>
+            <p class="text-xl font-semibold text-blue-400">魷魚遊戲</p>
             <img src="Xpoker_image/special/squidgame.png" alt="魷魚遊戲" class="h-20 w-auto mt-4">
           </div>
 
@@ -2569,18 +2599,18 @@ This is the block section that maybe i will use later
 
     <!-- A sentences between the container/section -->
 
-    <section class="bg-black py-12  blob-tl-pink blob-r-purple px-0">
+    <section class="bg-black py-12  blob-tl-blue blob-r-blue px-0">
       <div class="container mx-auto">
         <h2 class="text-center">
           撲克由我們定義
-          <span class="block text-gradient from-purple-600 via-pink-600 to-orange-600">隨時開局，無限可能</span>
+          <span class="block text-gradient from-blue-600 via-blue-600 to-blue-600">隨時開局，無限可能</span>
         </h2>
       </div>
     </section>
 
     <!-- Xpoker Download Ways  -->
 
-    <section class="container bg-black text-white blob-tl-purple blob-r-pink py-24">
+    <section class="container bg-black text-white blob-tl-blue blob-r-blue py-24">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         <!-- 👉 LEFT SIDE IMAGE -->
@@ -2603,22 +2633,22 @@ This is the block section that maybe i will use later
 
             <!-- ✅ Gradient Button -->
             <a href="#" class="relative w-full text-center rounded-full overflow-hidden px-6 py-3">
-              <span class="absolute inset-0 bg-gradient-to-r from-pink-700 to-purple-700"></span>
+              <span class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-700"></span>
               <span class="relative text-zinc-200 font-medium">App Store</span>
             </a>
 
             <a href="#" class="relative w-full text-center rounded-full overflow-hidden px-6 py-3">
-              <span class="absolute inset-0 bg-gradient-to-r from-pink-700 to-purple-700"></span>
+              <span class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-700"></span>
               <span class="relative text-zinc-200 font-medium">Android</span>
             </a>
 
             <a href="#" class="relative w-full text-center rounded-full overflow-hidden px-6 py-3">
-              <span class="absolute inset-0 bg-gradient-to-r from-pink-700 to-purple-700"></span>
+              <span class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-700"></span>
               <span class="relative text-zinc-200 font-medium">Windows</span>
             </a>
 
             <!-- 專人服務 -->
-            <a href="#" class="text-pink-400 hover:text-white transition mt-4 underline">
+            <a href="#" class="text-blue-400 hover:text-white transition mt-4 underline">
               專人服務 →
             </a>
 
@@ -2656,11 +2686,11 @@ This is the block section that maybe i will use later
               </div>
               <div class="mt-8 mx-auto relative w-fit group">
                 <div
-                  class="absolute inset-2 group-hover:bg-gradient-to-r from-pink-500 to-purple-500 blur-lg animate-pulse-slow group-hover:animate-pulse">
+                  class="absolute inset-2 group-hover:bg-gradient-to-r from-blue-500 to-blue-500 blur-lg animate-pulse-slow group-hover:animate-pulse">
                 </div>
                 <a class="style-none" href="Attached the hyperlink">
                   <button
-                    class="relative bg-gradient-to-r from-pink-700 to-purple-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+                    class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
                     了解更多
                   </button>
                 </a>
@@ -2679,11 +2709,11 @@ This is the block section that maybe i will use later
               </div>
               <div class="mt-8 mx-auto relative w-fit group">
                 <div
-                  class="absolute inset-2 group-hover:bg-gradient-to-r from-pink-500 to-purple-500 blur-lg animate-pulse-slow group-hover:animate-pulse">
+                  class="absolute inset-2 group-hover:bg-gradient-to-r from-blue-500 to-blue-500 blur-lg animate-pulse-slow group-hover:animate-pulse">
                 </div>
                 <a class="style-none" href="Attached the hyperlink">
                   <button
-                    class="relative bg-gradient-to-r from-pink-700 to-purple-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+                    class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
                     了解更多
                   </button>
                 </a>
@@ -2696,7 +2726,7 @@ This is the block section that maybe i will use later
 
     </section>
     <!--This part is the reason of choosing Xpoker-->
-    <section class="bg-black py-24 blob-tl-purple blob-r-pink px-6 lg:px-0">
+    <section class="bg-black py-24 blob-tl-blue blob-r-blue px-6 lg:px-0">
       <h2 class="text-center text-4xl lg:text-5xl font-bold text-cyan-400 mb-16 p py-4">
         為什麼要選擇 X-Poker?
       </h2>
@@ -2710,7 +2740,7 @@ This is the block section that maybe i will use later
             <!-- Bullet Item 1 -->
             <div class="flex items-start gap-x-6">
               <div
-                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-700 to-purple-700 shadow-lg">
+                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-700 shadow-lg">
                 <!-- Fixed Heroicons -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
                   strokeWidth="2" stroke="currentColor">
@@ -2729,7 +2759,7 @@ This is the block section that maybe i will use later
             <!-- Bullet Item 2 -->
             <div class="flex items-start gap-x-6">
               <div
-                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-700 to-purple-700 shadow-lg">
+                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-700 shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
                   strokeWidth="2" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round"
@@ -2748,7 +2778,7 @@ This is the block section that maybe i will use later
             <!-- Bullet Item 3 -->
             <div class="flex items-start gap-x-6">
               <div
-                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-700 to-purple-700 shadow-lg">
+                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-700 shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
                   strokeWidth="2" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round"
@@ -2768,7 +2798,7 @@ This is the block section that maybe i will use later
             <!-- Bullet Item 4 -->
             <div class="flex items-start gap-x-6">
               <div
-                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-700 to-purple-700 shadow-lg">
+                class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-700 shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
                   strokeWidth="2" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round"

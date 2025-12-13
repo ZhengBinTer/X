@@ -1657,10 +1657,23 @@ This is the block section that maybe i will use later
     <!-- Using a rectengle block for showing purpose -->
 
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
-    <section class="container mx-auto px-6 lg:px-20 pb-32 blob-tl-blue blob-r-blue">
+    <section class="container mx-auto px-6 lg:px-20 pb-0 blob-tl-blue blob-r-blue">
+      <style>
+        .blob-r-blue::after {
+          width: 1000px !important;
+          height: 1000px !important;
+          bottom: -500px !important;
+          right: -400px !important;
+          filter: blur(150px) !important;
+          opacity: 0.7 !important;
+        }
+      </style>
 
       <div class="text-center mb-12">
-        <h2 class="text-5xl text-gradient from-blue-600 to-blue-600 mb-4 font-bold">X-Poker俱樂部推薦</h2>
+        <h2 class="text-5xl mb-4 font-bold">
+          <span class="text-white">X-Poker</span>
+          <span style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">俱樂部推薦</span>
+        </h2>
         <p class="text-lg text-white/80">不管是新手還是資深玩家，平台提供多種遊戲以及盲注級別供玩家選擇，讓每位玩家都能輕鬆找到最適合自己的桌子。</p>
       </div>
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -1772,18 +1785,26 @@ This is the block section that maybe i will use later
           </div>
         </div>
       </div>
+
+      <!-- More Clubs Button -->
+      <div class="mt-8 mb-8 flex justify-center">
+        <a href="#" class="inline-block group">
+          <button class="relative bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full px-8 py-3 text-gray-900 font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+            更多俱樂部資訊 →
+          </button>
+        </a>
+      </div>
     </section>
 
     <!-- Xpoker Buy Chips Section  -->
 
-    <section class="px-0 overflow-hidden blob-tl-blue blob-r-blue">
+    <section class="px-0 overflow-hidden py-0 blob-tl-blue blob-r-blue">
 
-      <div class="container mt-12 text-center mx-auto">
+      <div class="container mt-12 text-center mx-auto py-12">
         <div class="max-w-2xl mx-auto">
           <h2>
-            <span class="text-gradient text-7xl from-blue-600 via-blue-600 to-blue-600 animate-bounce-gradient">
-              X-POKER儲值/買賣幣
-            </span>
+            <span class="text-white text-7xl font-bold">X-POKER</span>
+            <span class="text-gradient text-7xl from-blue-600 via-blue-600 to-blue-600 animate-bounce-gradient block">儲值/買賣分</span>
           </h2>
           <p class="mt-3 text-white text-lg">
             在線上撲克裡，不只牌技重要，找到安全、可信賴的上線或幣商更是關鍵！選對上線，才能安全且快速、安心地完成買賣。
@@ -1798,7 +1819,7 @@ This is the block section that maybe i will use later
               class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur-2xl opacity-0 group-hover:opacity-80 transition-all duration-300 group-hover:scale-150">
             </div>
             <div
-              class="relative w-full max-w-xs h-64 rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-600/20 backdrop-blur-md hover:from-blue-800/60 hover:to-blue-500/30 transition-all duration-300 flex flex-col items-center justify-center p-6 shadow-2xl z-10">
+              class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_转账.png" alt="網銀轉帳"
                 class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">網銀轉帳</p>
@@ -1811,7 +1832,7 @@ This is the block section that maybe i will use later
               class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur-2xl opacity-0 group-hover:opacity-80 transition-all duration-300 group-hover:scale-150">
             </div>
             <div
-              class="relative w-full max-w-xs h-64 rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-600/20 backdrop-blur-md hover:from-blue-800/60 hover:to-blue-500/30 transition-all duration-300 flex flex-col items-center justify-center p-6 shadow-2xl z-10">
+              class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_街口.png" alt="街口支付"
                 class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">街口支付</p>
@@ -1824,7 +1845,7 @@ This is the block section that maybe i will use later
               class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur-2xl opacity-0 group-hover:opacity-80 transition-all duration-300 group-hover:scale-150">
             </div>
             <div
-              class="relative w-full max-w-xs h-64 rounded-2xl bg-gradient-to-br from-blue-900/40 to-blue-600/20 backdrop-blur-md hover:from-blue-800/60 hover:to-blue-500/30 transition-all duration-300 flex flex-col items-center justify-center p-6 shadow-2xl z-10">
+              class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_USDT.png" alt="虛擬貨幣 USDT"
                 class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">虛擬貨幣 USDT</p>

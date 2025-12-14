@@ -1606,17 +1606,7 @@
     <!-- Using a rectengle block for showing purpose -->
 
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
-    <section class="container mx-auto px-6 lg:px-20 pb-0 blob-tl-blue blob-r-blue">
-      <style>
-        .blob-r-blue::after {
-          width: 1000px !important;
-          height: 1000px !important;
-          bottom: -500px !important;
-          right: -400px !important;
-          filter: blur(150px) !important;
-          opacity: 0.7 !important;
-        }
-      </style>
+    <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0 blob-tl-blue blob-r-blue">
 
       <div class="text-center mb-12">
         <h2 class="text-5xl mb-4 font-bold">
@@ -1747,7 +1737,7 @@
 
     <!-- Xpoker Buy Chips Section  -->
 
-    <section class="px-0 overflow-hidden py-0 blob-tl-blue blob-r-blue">
+    <section id="buy-chips-section" class="container mx-auto px-0 py-0 blob-tl-blue blob-r-blue" style="overflow: visible;">
 
       <div class="container mt-12 text-center mx-auto py-12">
         <div class="max-w-2xl mx-auto">
@@ -1805,14 +1795,14 @@
     </section>
 
     <!-- Poker Cash Games Section (Staggered Layout like Reference) -->
-    <section class="bg-black py-24 blob-tl-blue blob-r-blue px-0">
+    <section id="game-types-section" class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue" style="overflow: visible;">
       <div class="container mx-auto px-4">
         
         <!-- Section Header -->
         <div class="text-center mb-16">
           <h2 class="text-5xl mb-4 font-bold">
             <span class="text-white">X-Poker</span>
-            <span style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            <span class="gradient-text-cyan">
               遊戲種類
             </span>
           </h2>

@@ -323,6 +323,63 @@
     var user_hash = "";
     var advertising_hash = "";
   </script>
+
+  <!-- Game Card Styles -->
+  <style>
+    .game-card {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid #374151;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      border-color: #06b6d4;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .card-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Accent colors */
+    .game-card.teal {
+      border-top: 3px solid #14b8a6;
+    }
+
+    .game-card.yellow {
+      border-top: 3px solid #eab308;
+    }
+
+    .game-card.green {
+      border-top: 3px solid #22c55e;
+    }
+
+    .game-card.blue {
+      border-top: 3px solid #3b82f6;
+    }
+
+    .game-card.red {
+      border-top: 3px solid #ef4444;
+    }
+
+    .game-card.orange {
+      border-top: 3px solid #f97316;
+    }
+  </style>
 </head>
 
 <body>
@@ -1600,59 +1657,6 @@
 
     </section>
 
-    <!-- <section class="container">
-
-This is the block section that maybe i will use later
-
-    <div class="text-center">
-      <h2 class="text-5xl text-gradient from-blue-500 to-blue-500 mb-2">歡迎來到Natural8</h2>
-      <p class="text-lg">您正在尋找一個既有趣又安全、公平的線上德州撲克遊戲平台嗎？那就來試試Natural8吧！以下是一些讓您嘗試我們的原因：</p>
-    </div>
-
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <a id="home-link-why-n8-pokers" class="col-span-1 group cursor-pointer relative bg-black hover:bg-zinc-900/10 transition duration-500 border border-zinc-800 hover:border-zinc-500 rounded-md style-none" href="/zh-TW/poker">
-        <div class="absolute top-12 left-4 text-center w-full z-0 ">
-          <div class="bg-opacity-60 bg-sky-400 h-24 w-24 rounded-full inline-block blur-2xl transform-gpu"></div>
-        </div>
-        <div class="h-full p-6 pb-8 rounded relative text-center">
-          <div class="w-full aspect-video flex items-center justify-center relative">
-            <div class="absolute inset-0 overflow-hidden pointer-events-none">
-              <div class="solar-system">
-                <div class="sun"></div>
-                <div class="orbit orbit-1"><div class="planet planet-1"></div></div>
-                <div class="orbit orbit-2"><div class="planet planet-2"></div></div>
-                <div class="orbit orbit-3"><div class="planet planet-3"></div></div>
-                <div class="orbit orbit-4"><div class="planet planet-4"></div></div>
-                <div class="orbit orbit-5"><div class="planet planet-5"></div></div>
-              </div>
-            </div>
-
-            <div class="absolute top-[25%] right-0 w-full">
-              <p class="text-5xl font-black text-white mb-1">197,097</p>
-              <p class="text-xs font-semibold text-white/70">Players Online</p>
-            </div>
-          </div>
-          <h5 class="my-3">令人驚嘆的玩家池</h5>
-          <p class="leading-relaxed text-sm"></p>
-        </div>
-      </a>
-
-      <a id="home-link-why-n8-cashback" class="col-span-1 group cursor-pointer relative bg-black hover:bg-zinc-900/70 transition duration-500 border border-zinc-800 hover:border-zinc-500 rounded-md style-none overflow-hidden" href="/zh-TW/promotions/fish-buffet">
-        <div class="absolute top-12 left-4 text-center w-full z-0">
-          <div class="bg-opacity-60 bg-gray-100 group-hover:bg-blue-700 h-24 w-24 rounded-full inline-block blur-2xl transform-gpu"></div>
-        </div>
-        <div class="h-full p-6 relative text-center z-20">
-          <div class="w-full aspect-video flex items-center justify-center relative">
-              <h3 class="text-5xl font-bold select-none">60% <span class="text-sky-500">Cashback</span></h3>
-          </div>
-          <h5 class="my-3">豐厚現金回饋獎勵</h5>
-          <p class="leading-relaxed text-sm">獨特的忠誠度計劃，固定回饋高達 60%</p>
-        </div>
-      </a>
-
-    </div>
-</section> -->
 
     <!-- Using a rectengle block for showing purpose -->
 
@@ -1821,7 +1825,7 @@ This is the block section that maybe i will use later
             <div
               class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_转账.png" alt="網銀轉帳"
-                class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
+                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">網銀轉帳</p>
             </div>
           </div>
@@ -1834,7 +1838,7 @@ This is the block section that maybe i will use later
             <div
               class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_街口.png" alt="街口支付"
-                class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
+                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">街口支付</p>
             </div>
           </div>
@@ -1847,7 +1851,7 @@ This is the block section that maybe i will use later
             <div
               class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
               <img src="Webite_Final_PNG/Button_USDT.png" alt="虛擬貨幣 USDT"
-                class="w-24 h-24 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
+                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110">
               <p class="text-white text-lg font-semibold mt-4 relative z-20">虛擬貨幣 USDT</p>
             </div>
           </div>
@@ -1855,6 +1859,103 @@ This is the block section that maybe i will use later
       </div>
     </section>
 
+    <!-- Poker Cash Games Section (Staggered Layout like Reference) -->
+    <section class="bg-black py-24 blob-tl-blue blob-r-blue px-0">
+      <div class="container mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-5xl mb-4 font-bold">
+            <span class="text-white">X-Poker</span>
+            <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-500 bg-clip-text text-transparent">
+              遊戲種類
+            </span>
+          </h2>
+          <p class="text-lg text-white/80 max-w-3xl mx-auto">
+            遊戲種類繁多，桌子選擇豐富，盲注從 0.10/0.20 到 2000/4000，滿足各種玩家需求
+          </p>
+        </div>
+
+        <!-- Game Cards Grid -->
+        <div class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+          <!-- spacer -->
+          <div class="hidden lg:block"></div>
+
+          <!-- NLH -->
+          <div class="game-card -translate-x-20 teal">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_NLH.png" class="h-32 w-auto" alt="NLH">
+            </div>
+            <h3 class="card-title text-teal-400">NLH 經典德州</h3>
+            <p class="card-text">
+              每人2張手牌，配合5張公共牌組成最佳牌型，分4輪下注，牌型最大或對手全棄牌者贏
+            </p>
+          </div>
+
+          <!-- PLO -->
+          <div class="game-card yellow">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_PLO4.png" class="h-32 w-auto" alt="PLO">
+            </div>
+            <h3 class="card-title text-yellow-400">PLO 奧馬哈</h3>
+            <p class="card-text">
+              每人4/5/6張手牌，必須用2張手牌+3張公共牌組成最佳5張牌型，玩法類似德州撲克
+            </p>
+          </div>
+
+          <!-- Maubinh -->
+          <div class="game-card translate-x-20 green">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_十三支.png" class="h-32 w-auto" alt="Maubinh">
+            </div>
+            <h3 class="card-title text-green-400">Maubinh 13張</h3>
+            <p class="card-text">
+              每人分13張牌，分為三墩（頭墩3張、中墩5張、尾墩5張），依序比較大小
+            </p>
+          </div>
+
+          <!-- OFC -->
+          <div class="game-card -translate-x-20 blue">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_OFC.png" class="h-32 w-auto" alt="OFC">
+            </div>
+            <h3 class="card-title text-blue-400">OFC 大菠蘿</h3>
+            <p class="card-text">
+              每人分13張牌，分頭墩、中墩、尾墩比大小，依牌型計分
+            </p>
+          </div>
+
+          <!-- AOF -->
+          <div class="game-card red">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_AOF.png" class="h-32 w-auto" alt="AOF">
+            </div>
+            <h3 class="card-title text-red-400">AOF 全壓 / 棄牌</h3>
+            <p class="card-text">
+              每局玩家只能選擇全押（All-in）或棄牌（Fold），適合快速節奏玩法
+            </p>
+          </div>
+
+          <!-- 6+ Short Deck -->
+          <div class="game-card translate-x-20 orange">
+            <div class="flex justify-center mb-6">
+              <img src="Webite_Final_PNG/Game_6+.png" class="h-32 w-auto" alt="Short Deck">
+            </div>
+            <h3 class="card-title text-orange-400">6+ 短牌</h3>
+            <p class="card-text">
+              使用36張牌（去掉2-5），節奏更快、變化更多的德州撲克變體
+            </p>
+          </div>
+
+          <!-- spacers -->
+          <div class="hidden lg:block"></div>
+          <div class="hidden lg:block"></div>
+
+        </div>
+      </div>
+    </section>
+    
     <!-- Poker Apps Games Intro -->
 
     <section class="bg-black py-24 blob-tl-blue blob-r-blue px-0 **block !block !visible min-h-screen**">

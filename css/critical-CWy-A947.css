@@ -301,92 +301,58 @@ var(--tw-backdrop-sepia);background-color:#18181bb3;border-bottom-width:1px;bord
   background-clip: text;
 }
 
-/* Infinite scroll animation for tournament banners */
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+/* Tournament Section Scroll Animations */
+.scroll-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
-.animate-infinite-scroll {
-  animation: infinite-scroll var(--infinite-scroll-duration, 50s) linear infinite;
-}
-
-/* Reverse scroll animation (right to left) */
-@keyframes infinite-scroll-reverse {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-.animate-infinite-scroll-reverse {
-  animation: infinite-scroll-reverse var(--infinite-scroll-duration, 50s) linear infinite;
-}
-
-/* Vertical scroll animations for portrait tournament images */
+/* DOWN - scrolls content upward */
 @keyframes scroll-down {
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
+/* UP - scrolls content downward */
 @keyframes scroll-up {
   0% {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.animate-scroll-down {
+.scroll-down {
   animation: scroll-down var(--scroll-duration, 30s) linear infinite;
+  -webkit-animation: scroll-down var(--scroll-duration, 30s) linear infinite;
 }
 
-.animate-scroll-up {
+.scroll-up {
   animation: scroll-up var(--scroll-duration, 30s) linear infinite;
+  -webkit-animation: scroll-up var(--scroll-duration, 30s) linear infinite;
 }
 
-/* Vertical scroll animations for portrait tournament images */
-@keyframes scroll-down {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes scroll-up {
-  from {
-    transform: translateY(-50%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.animate-scroll-down {
-  animation: scroll-down var(--scroll-duration, 30s) linear infinite;
-}
-
-.animate-scroll-up {
-  animation: scroll-up var(--scroll-duration, 30s) linear infinite;
-}
 /* Updated scroll card styling */
 .scroll-card {
-  height: 100%;
   width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 0.75rem;
   flex-shrink: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

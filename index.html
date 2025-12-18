@@ -426,6 +426,137 @@
       </header>
     </section>
 
+    <!-- Sticky Floating Customer Service Button -->
+    <a href="https://lin.ee/MWsYX7D" target="_blank" class="line-cs-button">
+      <div class="line-cs-container">
+        <div class="line-cs-text">需要小編協助嗎？</div>
+        <div class="line-cs-icon-wrapper">
+          <img src="Webite_Final_PNG/LINE_APP_Android.png" alt="LINE" class="line-cs-icon" />
+          <span class="line-cs-badge">1</span>
+        </div>
+      </div>
+    </a>
+
+    <style>
+      .line-cs-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .line-cs-button:hover {
+        transform: translateY(-5px);
+      }
+
+      .line-cs-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .line-cs-text {
+        background: white;
+        color: #333;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        white-space: nowrap;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .line-cs-button:hover .line-cs-text {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .line-cs-icon-wrapper {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #06C755;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(6, 199, 85, 0.4);
+        transition: box-shadow 0.3s ease;
+      }
+
+      .line-cs-button:hover .line-cs-icon-wrapper {
+        box-shadow: 0 6px 20px rgba(6, 199, 85, 0.6);
+      }
+
+      .line-cs-icon {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+      }
+
+      .line-cs-badge {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        background: #ff3b30;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        border: 2px solid white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .line-cs-button {
+          bottom: 15px;
+          right: 15px;
+        }
+
+        .line-cs-text {
+          font-size: 14px;
+          padding: 10px 16px;
+        }
+
+        .line-cs-icon-wrapper {
+          width: 55px;
+          height: 55px;
+        }
+
+        .line-cs-icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      /* Animation for attention */
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .line-cs-icon-wrapper {
+        animation: pulse 2s ease-in-out infinite;
+      }
+    </style>
+
+    
+
     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- First page of the index -->
 
@@ -903,7 +1034,7 @@
     <section class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none" />
+        <img src="Webite_Final_PNG/IMG1.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none" />
       </div>
 
       <div class="flex-1" style="padding-left: 200px;">
@@ -916,7 +1047,7 @@
         </p>
 
         <div class="mt-10 flex flex-col gap-4">
-          <a href="#" class="inline-block">
+          <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" rel="nofollow" class="inline-block">
             <div class="relative bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-purple-500/50 transition duration-300 group">
               <div class="relative flex items-center gap-3">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -927,7 +1058,7 @@
             </div>
           </a>
 
-          <a href="#" class="inline-block">
+          <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank" rel="nofollow" class="inline-block">
             <div class="relative bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-blue-500/50 transition duration-300 group">
               <div class="relative flex items-center gap-3">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -938,7 +1069,7 @@
             </div>
           </a>
 
-          <a href="#" class="inline-block">
+          <a href="https://static.x-game.net/version/website/X-Poker8.0.msi?t=1702934641" target="_blank" rel="nofollow" class="inline-block">
             <div class="relative bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-blue-600/50 transition duration-300 group">
               <div class="relative flex items-center gap-3">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -1169,9 +1300,9 @@
             <span class="gradient-text-cyan">常見問題</span><br />(FAQ)
           </h2>
           <p class="text-base text-white/70 leading-relaxed mb-8">
-            如果您在使用過程中遇到任何問題或有任何疑問，歡迎隨時聯繫我們的<span class="gradient-text-cyan font-semibold">專業客服團隊</span>。
+            如果您在使用過程中遇到任何問題或有任何疑問，歡迎隨時聯繫我們的<a href="https://lin.ee/MWsYX7D" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">專業客服團隊</a>。
           </p>
-          <a href="#" class="inline-block">
+          <a href="https://lin.ee/MWsYX7D" target="_blank" class="inline-block">
             <button
               class="bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full px-8 py-3 text-gray-900 font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
               聯繫客服
@@ -1193,7 +1324,7 @@
                 </svg>
               </summary>
               <div class="pb-6 text-white/70 leading-relaxed">
-                聯繫<span class="gradient-text-cyan font-semibold">客服</span>索取俱樂部資訊並且告知客服人員<span
+                聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>索取俱樂部資訊並且告知客服人員<span
                   class="gradient-text-cyan font-semibold">遊戲ID</span>即可通過申請～
               </div>
             </details>
@@ -1222,7 +1353,7 @@
                 </svg>
               </summary>
               <div class="pb-6 text-white/70 leading-relaxed">
-                請聯繫<span class="gradient-text-cyan font-semibold">客服</span>協助您解決此問題～
+                請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～
               </div>
             </details>
 
@@ -1236,7 +1367,7 @@
                 </svg>
               </summary>
               <div class="pb-6 text-white/70 leading-relaxed">
-                對的喔～俱樂部裡面的桌子是需要向客服<span class="gradient-text-cyan font-semibold">購買籌碼</span>才能開始遊戲～
+                對的喔～俱樂部裡面的桌子是需要向<a href="https://lin.ee/MWsYX7D" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a><span class="gradient-text-cyan font-semibold">購買籌碼</span>才能開始遊戲～
               </div>
             </details>
 

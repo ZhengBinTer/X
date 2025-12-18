@@ -884,98 +884,178 @@
     </section>
 
     <!-- Why Us Section -->
-    <section class="relative py-24 overflow-hidden blob-r-blue" id="why-us">
-      <!-- Dark gradient background -->
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-black"></div>
-
+    <section class="relative py-24 overflow-hidden" id="why-us">
+      
       <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 class="text-center text-5xl font-bold text-white mb-24">
-          為什麼選擇我們？
+        <h2 class="text-center text-5xl font-bold mb-20 animate-fade-in-down">
+          <span class="text-gray-300">為什麼</span><span class="gradient-text-cyan">選擇我們</span><span class="text-gray-300">？</span>
         </h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 text-white">
+        <!-- Infographic Style Layout - 3 on top, 2 on bottom -->
+        <div class="text-white max-w-6xl mx-auto">
+          
+          <!-- Top Row - 3 Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            
+            <!-- Card 1 - Professional Support -->
+            <div class="why-us-card" style="animation-delay: 0.1s;">
+              <div class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+                <!-- Top Badge -->
+                <div class="absolute -top-px left-1/2 transform -translate-x-1/2">
+                  <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-b-2xl font-bold text-sm tracking-wider shadow-lg">
+                    1. 專業客服支援
+                  </div>
+                </div>
+                
+                <!-- Icon -->
+                <div class="flex justify-center mt-12 mb-6">
+                  <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                    </svg>
+                  </div>
+                </div>
 
-          <!-- Column 1 -->
-          <div class="flex flex-col gap-6">
-            <!-- 專業客服團隊 - Tall -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[280px] flex flex-col justify-between group hover:border-purple-500/60 transition-all duration-300">
-              <div class="relative z-10">
-                <h4 class="text-2xl font-bold mb-4">專業客服團隊</h4>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <!-- Content -->
+                <h4 class="text-xl font-bold mb-3 text-center text-white group-hover:text-blue-300 transition-colors duration-300">
+                  專業客服團隊
+                </h4>
+                <p class="text-sm text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                   我們專業友好的客服團隊全天 24 小時為您服務，隨時解決您的問題。
                 </p>
               </div>
-              <div class="absolute bottom-4 right-4 text-[120px] font-black text-white/5 leading-none select-none">
-                24/7
-              </div>
             </div>
 
-            <!-- 輕鬆存取款 - Short -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[140px] flex flex-col justify-center group hover:border-purple-500/60 transition-all duration-300">
-              <h4 class="text-2xl font-bold mb-2">輕鬆存取款</h4>
-              <p class="text-sm text-gray-400">
-                多種出入金方式，快速、安全、方便。
-              </p>
-            </div>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="flex flex-col gap-6">
-            <!-- 在所有平台上可用 - Short -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[140px] flex flex-col justify-center group hover:border-purple-500/60 transition-all duration-300">
-              <h4 class="text-2xl font-bold mb-2">在所有平台上可用</h4>
-              <p class="text-sm text-gray-400">
-                桌面、手機、平板全面支援，隨時隨地暢玩。
-              </p>
-            </div>
-
-            <!-- 領先的撲克平台 - Tall -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[280px] flex flex-col justify-center group hover:border-purple-500/60 transition-all duration-300">
-              <h4 class="text-2xl font-bold mb-4">領先的撲克平台</h4>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                頂級系統、流暢體驗，專為撲克玩家打造。
-              </p>
-            </div>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="flex flex-col gap-6">
-            <!-- 簡單、安全、可靠 - Tall with icons -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[280px] flex flex-col justify-center group hover:border-purple-500/60 transition-all duration-300">
-              <div class="text-center">
-                <h4 class="text-2xl font-bold mb-8">簡單 · 安全 · 可靠</h4>
-                <div class="flex gap-6 justify-center">
+            <!-- Card 2 - Simple, Safe, Reliable (with UI/UX team images) -->
+            <div class="why-us-card" style="animation-delay: 0.2s;">
+              <div class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+                <!-- Top Badge -->
+                <div class="absolute -top-px left-1/2 transform -translate-x-1/2">
+                  <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-b-2xl font-bold text-sm tracking-wider shadow-lg">
+                    2. 安全穩定可靠
+                  </div>
+                </div>
+                
+                <!-- Icons from UI/UX team -->
+                <div class="flex justify-center gap-4 mt-12 mb-6">
                   <img src="Webite_Final_PNG/Icon_简单.png" alt="簡單"
-                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" />
                   <img src="Webite_Final_PNG/Icon_安全.png" alt="安全"
-                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" 
+                    style="transition-delay: 0.1s;" />
                   <img src="Webite_Final_PNG/Icon_可靠.png" alt="可靠"
-                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                    style="transition-delay: 0.2s;" />
                 </div>
+
+                <!-- Content -->
+                <h4 class="text-xl font-bold mb-3 text-center text-white group-hover:text-blue-300 transition-colors duration-300">
+                  簡單 · 安全 · 可靠
+                </h4>
+                <p class="text-sm text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  我們提供最安全可靠的遊戲環境，讓您安心暢玩。
+                </p>
               </div>
             </div>
 
-            <!-- 18+ box - Short -->
-            <div
-              class="bg-black/80 border border-white/20 p-8 relative h-[140px] flex items-center justify-center group hover:border-yellow-500/60 transition-all duration-300">
-              <div class="flex flex-col items-center gap-3">
-                <div class="text-5xl font-black text-yellow-500">
-                  18+
+            <!-- Card 3 - All Platforms -->
+            <div class="why-us-card" style="animation-delay: 0.3s;">
+              <div class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+                <!-- Top Badge -->
+                <div class="absolute -top-px left-1/2 transform -translate-x-1/2">
+                  <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-b-2xl font-bold text-sm tracking-wider shadow-lg">
+                    3. 全平台支援
+                  </div>
                 </div>
-                <p class="text-sm text-gray-400 font-semibold">負責任博彩</p>
+                
+                <!-- Icon -->
+                <div class="flex justify-center mt-12 mb-6">
+                  <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-xl font-bold mb-3 text-center text-white group-hover:text-blue-300 transition-colors duration-300">
+                  在所有平台上可用
+                </h4>
+                <p class="text-sm text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  桌面、手機、平板全面支援，隨時隨地暢玩。
+                </p>
               </div>
             </div>
+
+          </div>
+
+          <!-- Bottom Row - 2 Cards Centered -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+            <!-- Card 4 - Leading Platform -->
+            <div class="why-us-card" style="animation-delay: 0.4s;">
+              <div class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+                <!-- Top Badge -->
+                <div class="absolute -top-px left-1/2 transform -translate-x-1/2">
+                  <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-b-2xl font-bold text-sm tracking-wider shadow-lg">
+                    4. 頂級遊戲體驗
+                  </div>
+                </div>
+                
+                <!-- Icon -->
+                <div class="flex justify-center mt-12 mb-6">
+                  <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-xl font-bold mb-3 text-center text-white group-hover:text-blue-300 transition-colors duration-300">
+                  領先的撲克平台
+                </h4>
+                <p class="text-sm text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  頂級系統、流暢體驗，專為撲克玩家打造。
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 5 - Easy Deposit -->
+            <div class="why-us-card" style="animation-delay: 0.5s;">
+              <div class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+                <!-- Top Badge -->
+                <div class="absolute -top-px left-1/2 transform -translate-x-1/2">
+                  <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2 rounded-b-2xl font-bold text-sm tracking-wider shadow-lg">
+                    5. 快速存取款
+                  </div>
+                </div>
+                
+                <!-- Icon -->
+                <div class="flex justify-center mt-12 mb-6">
+                  <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <h4 class="text-xl font-bold mb-3 text-center text-white group-hover:text-blue-300 transition-colors duration-300">
+                  輕鬆存取款
+                </h4>
+                <p class="text-sm text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  多種出入金方式，快速、安全、方便。
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </div>
-    </section>
-
+    </section>    
+    
     <!--QNA-Section-->
 
     <section class="container bg-black py-24 px-6 blob-tl-blue blob-r-blue" id="faq">

@@ -348,7 +348,7 @@
 
     <div id="header-scroll-observer"></div>
 
-    <!--Section part -->
+    <!-- Navigation Bar part -->
     <section class="p-0 sticky top-0 header-banner" id="navigation-header">
       <header class="group">
         <div
@@ -367,31 +367,31 @@
                   <!-- Navigation items -->
                   <li>
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-getting-started-index" href="/zh-TW/getting-started">首頁</a>
+                      id="header-link-getting-started-index" href="#navigation-header">首頁</a>
                   </li>
                   <li class="inline-block">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-tournaments-index" href="/zh-TW/poker/tournaments">出入金教學</a>
+                      id="header-link-tournaments-index" href="#buy-chips-section">出入金教學</a>
                   </li>
                   <li class="inline-block with-dropdown">
                     <a class="text-xs xl:text-sm hover:text-gray-300 cursor-pointer" id="header-link-poker-index"
-                      href="/zh-TW/poker">App 下載</a>
+                      href="#app-download">App 下載</a>
                   </li>
                   <li class="inline-block with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-casino-index" href="/zh-TW/casino">遊戲技巧</a>
+                      id="header-link-casino-index" href="#">遊戲技巧</a>
                   </li>
                   <li class="inline-block with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-ambassadors-index" href="/zh-TW/ambassadors">平台推薦</a>
+                      id="header-link-ambassadors-index" href="#">平台推薦</a>
                   </li>
                   <li>
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      href="/zh-TW/games">遊戲種類</a>
+                      href="#game-types-section">遊戲種類</a>
                   </li>
                   <li>
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      href="/zh-TW/faq">常見問題</a>
+                      href="#faq">常見問題</a>
                   </li>
                 </ul>
               </nav>
@@ -580,25 +580,62 @@
         <div class="mt-10 flex flex-wrap gap-4">
           <a href="/zh-TW/poker" class="inline-block">
             <button
-              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
               俱樂部推薦
             </button>
           </a>
 
           <a href="/zh-TW/promotions" class="inline-block">
             <button
-              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
               儲值教學
             </button>
           </a>
 
           <a href="/zh-TW/download" class="inline-block">
             <button
-              class="relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 group-hover:text-white transition duration-200 z-10">
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
               APP下載
             </button>
           </a>
         </div>
+
+        <style>
+          .nav-animated-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+          }
+          
+          .nav-animated-btn:after {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 1px;
+            content: '';
+            color: transparent;
+            background: linear-gradient(to right, #3b82f6, #22d3ee);
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.5s ease-in-out;
+          }
+          
+          .nav-animated-btn:hover {
+            color: #fff !important;
+          }
+          
+          .nav-animated-btn:hover:after {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+          }
+        </style>
       </div>
 
       <div class="flex-1 flex justify-center relative">
@@ -732,13 +769,79 @@
 
       <!-- More Clubs Button -->
       <div class="mt-8 mb-8 flex justify-center">
-        <a href="#" class="inline-block group">
-          <button
-            class="relative bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full px-8 py-3 text-gray-900 font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-            更多俱樂部資訊 →
-          </button>
+        <a href="#" class="inline-block">
+          <div class="animated-btn-container">
+            <button class="animated-btn-rounded">
+              <svg width="220px" height="50px" viewBox="0 0 220 50" class="animated-btn-border">
+                <rect x="1" y="1" width="218" height="48" rx="25" ry="25" class="animated-btn-bg-line" />
+                <rect x="1" y="1" width="218" height="48" rx="25" ry="25" class="animated-btn-hl-line" />
+              </svg>
+              <span>更多俱樂部資訊 →</span>
+            </button>
+          </div>
         </a>
       </div>
+
+      <style>
+        .animated-btn-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .animated-btn-rounded {
+          width: 220px;
+          height: 50px;
+          cursor: pointer;
+          background: linear-gradient(to right, #3b82f6, #22d3ee);
+          border: none;
+          border-radius: 25px;
+          outline: none;
+          transition: all 0.5s ease-in-out;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .animated-btn-border {
+          position: absolute;
+          left: 0;
+          top: 0;
+          fill: none;
+          pointer-events: none;
+        }
+
+        .animated-btn-bg-line {
+          stroke: transparent;
+          stroke-width: 2;
+        }
+
+        .animated-btn-hl-line {
+          stroke: #fff;
+          stroke-width: 3;
+          stroke-dasharray: 200 600;
+          stroke-dashoffset: 200;
+          transition: 1s ease-in-out;
+          filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+        }
+
+        .animated-btn-rounded:hover {
+          background: linear-gradient(to right, #2563eb, #06b6d4);
+          box-shadow: 0 10px 25px rgba(34, 211, 238, 0.4);
+          transform: scale(1.05);
+        }
+
+        .animated-btn-rounded:hover .animated-btn-hl-line {
+          stroke-dashoffset: -600;
+        }
+
+        .animated-btn-rounded span {
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+          position: relative;
+          z-index: 1;
+        }
+      </style>
     </section>
 
     <!-- A sentences between the container/section -->
@@ -1031,7 +1134,8 @@
     </section>
 
     <!-- APP Download Section -->
-    <section class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
+    <!-- APP Download Section -->
+    <section id="app-download" class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
       <div class="flex-1 flex justify-center relative">
         <img src="Webite_Final_PNG/IMG1.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none" />
@@ -1048,8 +1152,8 @@
 
         <div class="mt-10 flex flex-col gap-4">
           <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" rel="nofollow" class="inline-block">
-            <div class="relative bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-purple-500/50 transition duration-300 group">
-              <div class="relative flex items-center gap-3">
+            <div class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
                 </svg>
@@ -1059,8 +1163,8 @@
           </a>
 
           <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank" rel="nofollow" class="inline-block">
-            <div class="relative bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-blue-500/50 transition duration-300 group">
-              <div class="relative flex items-center gap-3">
+            <div class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                 </svg>
@@ -1070,8 +1174,8 @@
           </a>
 
           <a href="https://static.x-game.net/version/website/X-Poker8.0.msi?t=1702934641" target="_blank" rel="nofollow" class="inline-block">
-            <div class="relative bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-lg px-8 py-4 text-white hover:shadow-2xl hover:shadow-blue-600/50 transition duration-300 group">
-              <div class="relative flex items-center gap-3">
+            <div class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M3,12V6.75L9,5.43V11.91L3,12M20,3V11.75L10,11.9V5.21L20,3M3,13L9,13.09V19.9L3,18.75V13M20,13.25V22L10,20.09V13.1L20,13.25Z"/>
                 </svg>
@@ -1080,10 +1184,49 @@
             </div>
           </a>
         </div>
+
+        <style>
+          .slide-button {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+          }
+
+          .slide-button:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #3b82f6, #22d3ee);
+            border-radius: 0.5rem;
+            z-index: -2;
+          }
+
+          .slide-button:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, #1e40af, #0891b2);
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            z-index: -1;
+          }
+
+          .slide-button:hover:before {
+            width: 100%;
+          }
+
+          .slide-button:hover {
+            box-shadow: 0 20px 40px rgba(34, 211, 238, 0.5);
+          }
+        </style>
       </div>
-
     </section>
-
     
 
     <!-- Why Us Section -->

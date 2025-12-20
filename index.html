@@ -601,7 +601,8 @@
             overflow: hidden;
             z-index: 1;
             color: #fff;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 211, 238, 0.3);
           }
 
           .nav-animated-btn::after {
@@ -619,22 +620,26 @@
           .nav-animated-btn::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
             width: 0%;
-            height: 100%;
-            background: linear-gradient(to right, #06b6d4, #0ea5e9);
-            transition: all 0.3s;
+            height: 0%;
+            background: linear-gradient(135deg, #06b6d4, #0ea5e9, #22d3ee);
+            transition: all 0.4s ease;
             border-radius: 9999px;
             z-index: -1;
+            transform: translate(-50%, -50%);
           }
 
           .nav-animated-btn:hover {
             color: #fff;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(34, 211, 238, 0.5);
           }
 
           .nav-animated-btn:hover::before {
-            width: 100%;
+            width: 150%;
+            height: 150%;
           }
         </style>
 
@@ -1044,126 +1049,16 @@
               線上<span class="gradient-text-cyan">撲克錦標賽</span>
             </h3>
             <p class="max-w-2xl mb-6 text-base text-white/80 leading-relaxed">
-              在 Natural8
-              上體驗撲克錦標賽的刺激，每天舉辦多種精心策劃的錦標賽。這是積累資金和了解遊戲的好方法。抓住機會，通過我們精選的免費賽事玩免費撲克，或者通過我們的每日保證活動開始玩小額錦標賽。如果您想大賺一筆或回家，那麼豪客賽系列就是您想要的地方。
+              X-Poker 錦標賽提供每日多場不同的比賽，每位玩家有固定籌碼，輸光即淘汰，最後一人贏光所有籌碼成為冠軍！比賽節奏快、玩法多、獎勵豐厚，隨時都能挑戰自己的策略和技         巧，享受公平又精彩的撲克對決！
             </p>
-            <a href="#" class="inline-block">
-              <div class="btn btn--svg">
-                <svg class="btn--svg__background" width="190" height="42">
-                  <rect x="0" y="0" width="190" height="42" rx="21" fill="url(#gradient1)"/>
-                  <defs>
-                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                
-                <svg class="btn--svg__circle" width="190" height="42">
-                  <circle cx="95" cy="21" r="20" fill="#000"/>
-                </svg>
-                
-                <svg class="btn--svg__border btn--svg__border--left" width="190" height="42">
-                  <path d="M0,21 Q0,0 21,0 L169,0 Q190,0 190,21" fill="none" stroke="#06b6d4" stroke-width="2"/>
-                </svg>
-                
-                <svg class="btn--svg__border btn--svg__border--right" width="190" height="42">
-                  <path d="M190,21 Q190,42 169,42 L21,42 Q0,42 0,21" fill="none" stroke="#06b6d4" stroke-width="2"/>
-                </svg>
-                
-                <span class="btn--svg__label">查看所有錦標賽</span>
-              </div>
+            <a href="#tournaments" class="inline-block">
+              <button
+                class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
+                查看所有錦標賽
+              </button>
             </a>
           </div>
         </div>
-
-        <style>
-          .btn {
-            font-size: 0.9em;
-            line-height: 1em;
-            letter-spacing: 0.04em;
-            display: inline-block;
-          }
-
-          .btn--svg {
-            position: relative;
-            height: 42px;
-            width: 190px;
-            overflow: hidden;
-            border-radius: 21px;
-            cursor: pointer;
-          }
-
-          .btn--svg:hover .btn--svg__circle circle {
-            transform: scale(1.1);
-          }
-
-          .btn--svg:hover .btn--svg__background {
-            opacity: 0;
-          }
-
-          .btn--svg:hover .btn--svg__label {
-            color: #fff;
-          }
-
-          .btn--svg:hover .btn--svg__border--left path,
-          .btn--svg:hover .btn--svg__border--right path {
-            stroke-dasharray: 61.8204345703125 61.8204345703125;
-            stroke-dashoffset: 0;
-            transition-delay: 0.25s;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-in-out;
-            transition-property: stroke-dashoffset;
-          }
-
-          .btn--svg__label {
-            -webkit-font-smoothing: antialiased;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-weight: 600;
-            text-align: center;
-            color: #fff;
-            z-index: 3;
-            width: 100%;
-            transition: color 0.5s ease-in-out;
-            font-size: 14px;
-          }
-
-          .btn--svg__background {
-            transition: opacity 0.5s ease-in-out;
-          }
-
-          .btn--svg__circle circle {
-            transition: transform 0.5s ease-in-out;
-            transform: scale(0);
-            transform-origin: 50% 50%;
-          }
-
-          .btn--svg__border--left path,
-          .btn--svg__border--right path {
-            stroke-dasharray: 61.8204345703125 61.8204345703125;
-            transition-duration: 0s;
-            transition-timing-function: ease-in-out;
-            transition-property: stroke-dashoffset;
-            transition-delay: 0.5s;
-          }
-
-          .btn--svg__border--left path {
-            stroke-dashoffset: -61.8204345703125;
-          }
-
-          .btn--svg__border--right path {
-            stroke-dashoffset: 61.8204345703125;
-          }
-
-          .btn--svg svg,
-          .btn--svg__label {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transform-origin: 50% 50%;
-          }
-        </style>
 
         <!-- Right Side - Vertical Scrolling Columns -->
         <div class="relative h-[850px] md:h-[900px] lg:h-[950px] overflow-hidden px-4">

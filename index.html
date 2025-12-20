@@ -348,7 +348,21 @@
 
     <div id="header-scroll-observer"></div>
 
+    
     <!-- Navigation Bar part -->
+    <style>
+      #navigation-header header {
+        background: rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: all 0.3s ease !important;
+      }
+
+      #navigation-header {
+        z-index: 999 !important;
+      }
+    </style>
     <section class="p-0 sticky top-0 header-banner" id="navigation-header">
       <header class="group">
         <div
@@ -395,26 +409,6 @@
                   </li>
                 </ul>
               </nav>
-
-              <div id="desktop-searchbar" class="searchbar ">
-                <span id="desktop-searchbar-open" class="search-button flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                  </svg>
-                </span>
-
-                <div id="desktop-search-node" class="w-full"></div>
-                <span id="desktop-searchbar-close">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                  </svg>
-                </span>
-              </div>
-
             </div>
           </div>
           <div class="flex items-center gap-2 xl:gap-4 ml-auto">
@@ -1580,7 +1574,7 @@
 
     <!-- Footer -->
     <!-- This bassically havent done yet, wait other for thw content insertion -->
-    <footer class="bg-black py-12 mt-20">
+    <footer class="bg-black py-6 mt-12">
       <div class="container mx-auto text-center">
         <p class="font-semibold text-white">免責聲明</p>
 

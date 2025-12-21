@@ -91,7 +91,7 @@
 
   <!-- Google Tag Manager -->
   <script>
-    (function(w, d, s, l, i) {
+    (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
         'gtm.start': new Date().getTime(),
@@ -111,7 +111,7 @@
   <!-- Start VWO Async SmartCode -->
   <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com">
   <script type="text/javascript" id="vwoCode">
-    window._vwo_code || (function() {
+    window._vwo_code || (function () {
       var account_id = 856896,
         version = 2.1,
         settings_tolerance = 2000,
@@ -127,42 +127,42 @@
       try {
         var c = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config'));
         cc = c && typeof c === 'object' ? c : {}
-      } catch (e) {}
+      } catch (e) { }
       var stT = cc.stT === 'session' ? w.sessionStorage : w.localStorage;
       code = {
-        use_existing_jquery: function() {
+        use_existing_jquery: function () {
           return typeof use_existing_jquery !== 'undefined' ? use_existing_jquery : undefined
         },
-        library_tolerance: function() {
+        library_tolerance: function () {
           return typeof library_tolerance !== 'undefined' ? library_tolerance : undefined
         },
-        settings_tolerance: function() {
+        settings_tolerance: function () {
           return cc.sT || settings_tolerance
         },
-        hide_element_style: function() {
+        hide_element_style: function () {
           return '{' + (cc.hES || hide_element_style) + '}'
         },
-        hide_element: function() {
+        hide_element: function () {
           if (performance.getEntriesByName('first-contentful-paint')[0]) {
             return ''
           }
           return typeof cc.hE === 'string' ? cc.hE : hide_element
         },
-        getVersion: function() {
+        getVersion: function () {
           return version
         },
-        finish: function(e) {
+        finish: function (e) {
           if (!f) {
             f = true;
             var t = d.getElementById('_vis_opt_path_hides');
             if (t) t.parentNode.removeChild(t);
-            if (e)(new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e
+            if (e) (new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e
           }
         },
-        finished: function() {
+        finished: function () {
           return f
         },
-        addScript: function(e) {
+        addScript: function (e) {
           var t = d.createElement('script');
           t.type = 'text/javascript';
           if (e.src) {
@@ -172,7 +172,7 @@
           }
           d.getElementsByTagName('head')[0].appendChild(t)
         },
-        load: function(e, t) {
+        load: function (e, t) {
           var i = this.getSettings(),
             n = d.createElement('script'),
             r = this;
@@ -189,7 +189,7 @@
             o.open('GET', e, true);
             o.withCredentials = !t.dSC;
             o.responseType = t.responseType || 'text';
-            o.onload = function() {
+            o.onload = function () {
               if (t.onloadCb) {
                 return t.onloadCb(o, e)
               }
@@ -201,7 +201,7 @@
                 _vwo_code.finish('&e=loading_failure:' + e)
               }
             };
-            o.onerror = function() {
+            o.onerror = function () {
               if (t.onerrorCb) {
                 return t.onerrorCb(e)
               }
@@ -210,7 +210,7 @@
             o.send()
           }
         },
-        getSettings: function() {
+        getSettings: function () {
           try {
             var e = stT.getItem(cK);
             if (!e) {
@@ -226,10 +226,10 @@
             return
           }
         },
-        init: function() {
+        init: function () {
           if (d.URL.indexOf('__vwo_disable__') > -1) return;
           var e = this.settings_tolerance();
-          w._vwo_settings_timer = setTimeout(function() {
+          w._vwo_settings_timer = setTimeout(function () {
             _vwo_code.finish();
             stT.removeItem(cK)
           }, e);
@@ -273,26 +273,26 @@
 
   <!-- Posthog Start-->
   <script>
-    ! function(t, e) {
+    ! function (t, e) {
       var o, n, p, r;
-      e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
+      e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) {
         function g(t, e) {
           var o = e.split(".");
-          2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() {
+          2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () {
             t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
           }
-        }(p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p
+        } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p
           .src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t
             .getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
         var u = e;
-        for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
-            var e = "posthog";
-            return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
-          }, u.people.toString = function() {
-            return u.toString(1) + ".people (stub)"
-          }, o =
+        for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) {
+          var e = "posthog";
+          return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+        }, u.people.toString = function () {
+          return u.toString(1) + ".people (stub)"
+        }, o =
           "init Ce js Ls Te Fs Ds capture Ye calculateEventProperties Us register register_once register_for_session unregister unregister_for_session Ws getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Bs zs createPersonProfile Hs Ms Gs opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ns debug L qs getPageViewId captureTraceFeedback captureTraceMetric"
-          .split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+            .split(" "), n = 0; n < o.length; n++) g(u, o[n]);
         e._i.push([i, s, a])
       }, e.__SV = 1)
     }(document, window.posthog || []);
@@ -351,7 +351,7 @@
 
     <div id="header-scroll-observer"></div>
 
-    
+
     <!-- Navigation Bar part -->
     <style>
       #navigation-header header {
@@ -374,8 +374,10 @@
             <a class="inline-block" id="header-icon-natural8" href="/zh-TW">
               <picture>
                 <source type="image/webp"><img src="Xpoker_image/Xpoker_Logo.png" alt="Natural8 logo"
-                  class="h-8 w-auto sm:h-10" loading="eager" fetchpriority="high"></picture>
-            </a> </div>
+                  class="h-8 w-auto sm:h-10" loading="eager" fetchpriority="high">
+              </picture>
+            </a>
+          </div>
 
           <div class="hidden lg:block grow">
             <div class="relative max-w-4xl mx-auto">
@@ -570,7 +572,7 @@
         </h2>
 
         <p class="mt-6 text-lg text-white/80 max-w-xl leading-relaxed">
-        X-Poker 是最熱門的線上德州撲克平台，提供 24 小時桌況與真人對決，並提供專      業客服支援，協助玩家在遊戲過程中獲得支援，帶來穩定且公平的遊戲體驗。熱血對決，等您來挑戰！
+          X-Poker 是最熱門的線上德州撲克平台，提供 24 小時桌況與真人對決，並提供專 業客服支援，協助玩家在遊戲過程中獲得支援，帶來穩定且公平的遊戲體驗。熱血對決，等您來挑戰！
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
@@ -1050,7 +1052,7 @@
               線上<span class="gradient-text-cyan">撲克錦標賽</span>
             </h3>
             <p class="max-w-2xl mb-6 text-base text-white/80 leading-relaxed">
-              X-Poker 錦標賽提供每日多場不同的比賽，每位玩家有固定籌碼，輸光即淘汰，最後一人贏光所有籌碼成為冠軍！比賽節奏快、玩法多、獎勵豐厚，隨時都能挑戰自己的策略和技         巧，享受公平又精彩的撲克對決！
+              X-Poker 錦標賽提供每日多場不同的比賽，每位玩家有固定籌碼，輸光即淘汰，最後一人贏光所有籌碼成為冠軍！比賽節奏快、玩法多、獎勵豐厚，隨時都能挑戰自己的策略和技 巧，享受公平又精彩的撲克對決！
             </p>
             <a href="#tournaments" class="inline-block">
               <button
@@ -1291,8 +1293,7 @@
                 </div>
 
                 <!-- Content -->
-                <h4
-                  class="text-xl font-bold mb-3 text-center transition-colors duration-300"
+                <h4 class="text-xl font-bold mb-3 text-center transition-colors duration-300"
                   style="background: linear-gradient(to right, #22d3ee, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                   專業客服團隊
                 </h4>
@@ -1328,8 +1329,7 @@
                 </div>
 
                 <!-- Content -->
-                <h4
-                  class="text-xl font-bold mb-3 text-center transition-colors duration-300"
+                <h4 class="text-xl font-bold mb-3 text-center transition-colors duration-300"
                   style="background: linear-gradient(to right, #22d3ee, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                   簡單 · 安全 · 可靠
                 </h4>
@@ -1364,8 +1364,7 @@
                 </div>
 
                 <!-- Content -->
-                <h4
-                  class="text-xl font-bold mb-3 text-center transition-colors duration-300"
+                <h4 class="text-xl font-bold mb-3 text-center transition-colors duration-300"
                   style="background: linear-gradient(to right, #22d3ee, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                   在所有平台上可用
                 </h4>
@@ -1405,8 +1404,7 @@
                 </div>
 
                 <!-- Content -->
-                <h4
-                  class="text-xl font-bold mb-3 text-center transition-colors duration-300"
+                <h4 class="text-xl font-bold mb-3 text-center transition-colors duration-300"
                   style="background: linear-gradient(to right, #22d3ee, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                   領先的撲克平台
                 </h4>
@@ -1442,8 +1440,7 @@
                 </div>
 
                 <!-- Content -->
-                <h4
-                  class="text-xl font-bold mb-3 text-center transition-colors duration-300"
+                <h4 class="text-xl font-bold mb-3 text-center transition-colors duration-300"
                   style="background: linear-gradient(to right, #22d3ee, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                   輕鬆存取款
                 </h4>
@@ -1461,18 +1458,16 @@
     </section>
 
     <!--QNA-Section-->
+    <section class="container mx-auto px-6 lg:px-20 py-24 blob-tl-blue" id="faq">
+      <style>
+        details.group summary svg path:last-child {
+          display: block;
+        }
 
-    <style>
-      details.group summary svg path:last-child {
-        display: block;
-      }
-      
-      details.group[open] summary svg path:last-child {
-        display: none;
-      }
-    </style>
-
-    <section class="container mx-auto px-6 lg:px-20 py-24 bg-black blob-tl-blue blob-r-blue" id="faq">
+        details.group[open] summary svg path:last-child {
+          display: none;
+        }
+      </style>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="col-span-1">
           <div class="w-full lg:w-3/4">
@@ -1498,8 +1493,8 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">如何申請加入俱樂部？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
@@ -1515,8 +1510,8 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">同一時間一個帳號可以玩幾張桌子？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
@@ -1530,15 +1525,16 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">忘記帳號密碼或無法登入該怎麼處理？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
                 <p>請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank"
-                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～</p>
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～
+                </p>
               </div>
             </details>
 
@@ -1546,8 +1542,8 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">X-Poker俱樂部需要儲值才能玩嗎？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
@@ -1563,8 +1559,8 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">俱樂部裡面都是真人玩家嗎？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
@@ -1579,15 +1575,20 @@
               <summary
                 class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
                 <h3 class="text-base">如何註冊X-Poker帳號？</h3>
-                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
-                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 12H6" stroke="#d4d4d8"></path>
                   <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
-                <p>您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">App Store</a> 或 <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">Google Play</a> 下載 <span
-                    class="gradient-text-cyan font-semibold">Xpoker</span>，安裝後依照指示填寫基本資料即可完成<span
+                <p>您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447"
+                    target="_blank"
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">App
+                    Store</a> 或 <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641"
+                    target="_blank"
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">Google
+                    Play</a> 下載 <span class="gradient-text-cyan font-semibold">Xpoker</span>，安裝後依照指示填寫基本資料即可完成<span
                     class="gradient-text-cyan font-semibold">註冊並開始使用</span>～</p>
               </div>
             </details>

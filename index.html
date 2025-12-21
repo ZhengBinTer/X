@@ -1462,122 +1462,136 @@
 
     <!--QNA-Section-->
 
-    <section class="container bg-black py-24 px-6 blob-tl-blue blob-r-blue" id="faq">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16">
-        <!-- Left side - Title and description (2/5 = 40%) -->
-        <div class="lg:col-span-2">
-          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
-            <span class="gradient-text-cyan">常見問題</span><br />(FAQ)
-          </h2>
-          <p class="text-base text-white/70 leading-relaxed mb-8">
-            如果您在使用過程中遇到任何問題或有任何疑問，歡迎隨時聯繫我們的<a href="https://lin.ee/MWsYX7D" target="_blank"
-              class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">專業客服團隊</a>。
-          </p>
-          <a href="https://lin.ee/MWsYX7D" target="_blank" class="inline-block">
-            <button
-              class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
-              聯繫客服
-            </button>
-          </a>
+    <style>
+      details.group summary svg path:last-child {
+        display: block;
+      }
+      
+      details.group[open] summary svg path:last-child {
+        display: none;
+      }
+    </style>
+
+    <section class="container mx-auto px-6 lg:px-20 py-24 bg-black blob-tl-blue blob-r-blue" id="faq">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="col-span-1">
+          <div class="w-full lg:w-3/4">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <span class="gradient-text-cyan">常見問題</span><br />(FAQ)
+            </h2>
+            <p class="text-lg text-white/70 leading-relaxed mt-6 mb-8">
+              如果您在使用過程中遇到任何問題或有任何疑問，歡迎隨時聯繫我們的<a href="https://lin.ee/MWsYX7D" target="_blank"
+                class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">專業客服團隊</a>。
+            </p>
+            <a href="https://lin.ee/MWsYX7D" target="_blank" class="inline-block">
+              <button
+                class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
+                聯繫客服
+              </button>
+            </a>
+          </div>
         </div>
 
-        <!-- Right side - FAQ items (3/5 = 60%) -->
-        <div class="lg:col-span-3">
-          <div class="space-y-0">
-
-            <details class="group border-b border-white/10">
+        <div class="col-span-1 lg:col-span-2 lg:pl-12">
+          <dl class="divide-y divide-zinc-700">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">如何申請加入俱樂部？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">如何申請加入俱樂部？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                聯繫<a href="https://lin.ee/MWsYX7D" target="_blank"
-                  class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>索取俱樂部資訊並且告知客服人員<span
-                  class="gradient-text-cyan font-semibold">遊戲ID</span>即可通過申請～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>聯繫<a href="https://lin.ee/MWsYX7D" target="_blank"
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>索取俱樂部資訊並且告知客服人員<span
+                    class="gradient-text-cyan font-semibold">遊戲ID</span>即可通過申請～</p>
               </div>
             </details>
 
-            <details class="group border-b border-white/10">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">同一時間一個帳號可以玩幾張桌子？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">同一時間一個帳號可以玩幾張桌子？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                同個時間內一個帳號最多可玩<span class="gradient-text-cyan font-semibold">三張桌子</span>～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>同個時間內一個帳號最多可玩<span class="gradient-text-cyan font-semibold">三張桌子</span>～</p>
               </div>
             </details>
 
-            <details class="group border-b border-white/10">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">忘記帳號密碼或無法登入該怎麼處理？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">忘記帳號密碼或無法登入該怎麼處理？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank"
-                  class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank"
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～</p>
               </div>
             </details>
 
-            <details class="group border-b border-white/10">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">X-Poker俱樂部需要儲值才能玩嗎？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">X-Poker俱樂部需要儲值才能玩嗎？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                對的喔～俱樂部裡面的桌子是需要向<a href="https://lin.ee/MWsYX7D" target="_blank"
-                  class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a><span
-                  class="gradient-text-cyan font-semibold">購買籌碼</span>才能開始遊戲～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>對的喔～俱樂部裡面的桌子是需要向<a href="https://lin.ee/MWsYX7D" target="_blank"
+                    class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a><span
+                    class="gradient-text-cyan font-semibold">購買籌碼</span>才能開始遊戲～</p>
               </div>
             </details>
 
-            <details class="group border-b border-white/10">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">俱樂部裡面都是真人玩家嗎？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">俱樂部裡面都是真人玩家嗎？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                裡面都是<span class="gradient-text-cyan font-semibold">真人玩家對決</span>，平台嚴厲禁止使用第三方軟件，確保每場對局<span
-                  class="gradient-text-cyan font-semibold">公平與真實</span>～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>裡面都是<span class="gradient-text-cyan font-semibold">真人玩家對決</span>，平台嚴厲禁止使用第三方軟件，確保每場對局<span
+                    class="gradient-text-cyan font-semibold">公平與真實</span>～</p>
               </div>
             </details>
 
-            <details class="group border-b border-white/10">
+            <details class="group py-4">
               <summary
-                class="flex justify-between items-center py-6 cursor-pointer list-none text-white hover:text-cyan-400 transition-colors">
-                <span class="text-lg font-normal">如何註冊X-Poker帳號？</span>
-                <svg class="w-6 h-6 text-white group-open:rotate-45 transition-transform" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6"></path>
+                class="faq-summary flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-zinc-300 group-open:text-cyan-400">
+                <h3 class="text-base">如何註冊X-Poker帳號？</h3>
+                <svg class="mt-0.5 ml-4 h-6 w-6 flex-none" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 12H6" stroke="#d4d4d8"></path>
+                  <path d="M12 6v12" stroke="#d4d4d8"></path>
                 </svg>
               </summary>
-              <div class="pb-6 text-white/70 leading-relaxed">
-                您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">App Store</a> 或 <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">Google Play</a> 下載 <span
-                  class="gradient-text-cyan font-semibold">Xpoker</span>，安裝後依照指示填寫基本資料即可完成<span
-                  class="gradient-text-cyan font-semibold">註冊並開始使用</span>～
+              <div class="py-6 text-white/70 leading-relaxed">
+                <p>您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">App Store</a> 或 <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank" class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">Google Play</a> 下載 <span
+                    class="gradient-text-cyan font-semibold">Xpoker</span>，安裝後依照指示填寫基本資料即可完成<span
+                    class="gradient-text-cyan font-semibold">註冊並開始使用</span>～</p>
               </div>
             </details>
-
-          </div>
+          </dl>
         </div>
       </div>
     </section>

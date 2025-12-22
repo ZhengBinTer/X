@@ -390,6 +390,24 @@
 
     <!-- Navigation Bar part -->
     <style>
+      /* Override body/main overflow that prevents sticky */
+      body {
+        overflow-x: clip !important;
+      }
+
+      main {
+        overflow: visible !important;
+      }
+
+      #navigation-header {
+        position: sticky !important;
+        position: -webkit-sticky !important;
+        top: 0 !important;
+        z-index: 999 !important;
+        width: 100%;
+        will-change: transform;
+      }
+
       #navigation-header header {
         background: rgba(0, 0, 0, 0.8) !important;
         backdrop-filter: blur(12px) !important;
@@ -398,14 +416,96 @@
         transition: all 0.3s ease !important;
       }
 
-      #navigation-header {
-        z-index: 999 !important;
+      /* Enhanced shadow when scrolling */
+      #navigation-header.scrolled header {
+        background: rgba(0, 0, 0, 0.95) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Mobile Menu Overlay - MOBILE ONLY */
+      .mobile-menu-overlay {
+        position: fixed;
+        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        overflow-y: auto;
+      }
+
+      .mobile-menu-overlay.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .search-input {
+        width: 100%;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      .mobile-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        color: #efefef;
+        text-decoration: none;
+        font-weight: 400;
+        transition: background 0.2s;
+      }
+
+      .arrow-icon {
+        color: #666;
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+
+      body.no-scroll {
+        overflow: hidden;
+      }
+
+      /* Mobile hamburger button styling */
+      #menu-toggle {
+        display: none;
+        position: relative;
+        z-index: 10001;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 0.5rem;
+      }
+
+      @media (max-width: 1024px) {
+        #menu-toggle {
+          display: flex !important;
+        }
+
+        /* Hide desktop nav on mobile */
+        #desktop-navbar {
+          display: none;
+        }
       }
     </style>
     <section class="p-0 sticky top-0 header-banner" id="navigation-header">
       <header class="group">
         <div
-          class="gap-4 flex max-w-screen-2xl mx-auto items-center p-4 lg:p-6 xl:p-8 group-[.header-scrolled]:p-4 transition-all">
+          class="gap-4 flex max-w-screen-2xl mx-auto items-center justify-between p-4 lg:p-6 xl:p-8 group-[.header-scrolled]:p-4 transition-all">
           <div class="shrink-0 grid place-items-center">
             <a class="inline-block" id="header-icon-natural8" href="/zh-TW">
               <picture>
@@ -438,7 +538,7 @@
                   </li>
                   <li class="inline-block with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
-                      id="header-link-ambassadors-index" href="#">平台推薦</a>
+                      id="header-link-ambassadors-index" href="#club-section">平台推薦</a>
                   </li>
                   <li>
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
@@ -452,14 +552,68 @@
               </nav>
             </div>
           </div>
-          <div class="flex items-center gap-2 xl:gap-4 ml-auto">
+          <div class="flex items-center gap-2 xl:gap-4">
             <a id="header-cta-signup" href="/zh-TW/sign-up">
               <button class="btn btn-primary">Download</button>
             </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="text-white focus:outline-none z-[10001]" aria-label="Toggle menu">
+              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
+
+      <!-- Mobile Menu Overlay - Only visible on mobile -->
+      <div id="mobile-menu" class="mobile-menu-overlay lg:hidden">
+        <div class="flex flex-col px-6 pt-20">
+          <!-- Close Button -->
+          <button id="mobile-close-btn" class="self-end mb-6 text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div class="relative mb-6 px-2">
+            <span class="absolute inset-y-0 left-5 flex items-center text-gray-400">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <input type="text" placeholder="Search X-Poker..." class="search-input">
+          </div>
+
+          <nav class="flex flex-col">
+            <a href="#navigation-header" class="mobile-link">首頁 <span class="arrow-icon">›</span></a>
+            <a href="#buy-chips-section" class="mobile-link">出入金教學 <span class="arrow-icon">›</span></a>
+            <a href="#app-download" class="mobile-link">App 下載 <span class="arrow-icon">›</span></a>
+            <a href="#club-section" class="mobile-link">平台推薦 <span class="arrow-icon">›</span></a>
+            <a href="#game-types-section" class="mobile-link">遊戲種類 <span class="arrow-icon">›</span></a>
+            <a href="#faq" class="mobile-link">常見問題 <span class="arrow-icon">›</span></a>
+          </nav>
+        </div>
+      </div>
     </section>
+
+    <script src="js/mobile-navigation.js"></script>
+
+    <!-- Sticky Navigation Scroll Effect -->
+    <script>
+      window.addEventListener('scroll', function() {
+        const nav = document.getElementById('navigation-header');
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+    </script>
 
     <!-- Sticky Floating Customer Service Button -->
     <a href="https://lin.ee/MWsYX7D" target="_blank" class="line-cs-button">

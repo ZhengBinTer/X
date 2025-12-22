@@ -327,6 +327,42 @@
     var advertising_hash = "";
   </script>
 
+  <!-- Mobile Viewport Fix -->
+  <style>
+    /* Fix for mobile viewport ONLY */
+    @media (max-width: 1024px) {
+      html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+      }
+      
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        overflow-x: hidden;
+        width: 100%;
+      }
+      
+      section {
+        overflow-x: hidden;
+        width: 100%;
+      }
+      
+      /* Ensure images don't overflow on mobile */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -468,6 +504,9 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         white-space: nowrap;
         transition: box-shadow 0.3s ease;
+        max-width: calc(100vw - 140px);
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .line-cs-button:hover .line-cs-text {
@@ -536,6 +575,17 @@
         .line-cs-icon {
           width: 32px;
           height: 32px;
+        }
+      }
+      
+      /* Hide text on very small screens to prevent overflow */
+      @media (max-width: 480px) {
+        .line-cs-text {
+          display: none;
+        }
+        
+        .line-cs-container {
+          gap: 0;
         }
       }
 

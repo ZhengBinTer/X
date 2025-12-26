@@ -8582,3 +8582,108 @@ p>a {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
+/* Mobile-specific tournament section styles */
+@media (max-width: 1023px) {
+  #tournaments {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  #tournaments .grid {
+    gap: 2rem;
+  }
+  
+  /* Text content section for mobile */
+  #tournaments .h-full.px-6 {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem !important;
+    margin: 0 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  #tournaments h3 {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+    margin-bottom: 1rem !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #tournaments h3 .gradient-text-cyan {
+    display: inline;
+  }
+  
+  #tournaments p {
+    font-size: 0.95rem !important;
+    line-height: 1.6rem !important;
+    margin-bottom: 1.5rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  #tournaments button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  #tournaments a.inline-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Mobile scrolling columns optimization */
+@media (max-width: 767px) {
+  #tournaments {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  #tournaments .relative.h-\[850px\] {
+    height: 550px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    margin-top: 1rem;
+  }
+  
+  #tournaments .flex.gap-3 {
+    gap: 0.5rem !important;
+  }
+  
+  /* Adjust scroll card sizing for mobile */
+  .scroll-card {
+    border-radius: 0.5rem;
+  }
+  
+  /* Optimize gradient overlays for mobile */
+  #tournaments .h-32 {
+    height: 4rem !important;
+  }
+  
+  #tournaments h3 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #tournaments .relative.h-\[850px\] {
+    height: 750px !important;
+  }
+  
+  #tournaments .h-full.px-6 {
+    margin: 0 2rem;
+    padding: 2.5rem 2rem !important;
+  }
+  
+  #tournaments h3 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+}

@@ -8563,13 +8563,13 @@ p>a {
 }
 
 .scroll-down {
-  animation: scroll-down var(--scroll-duration, 30s) linear infinite;
-  -webkit-animation: scroll-down var(--scroll-duration, 30s) linear infinite;
+  animation: scroll-down var(--scroll-duration, 20s) linear infinite;
+  -webkit-animation: scroll-down var(--scroll-duration, 20s) linear infinite;
 }
 
 .scroll-up {
-  animation: scroll-up var(--scroll-duration, 30s) linear infinite;
-  -webkit-animation: scroll-up var(--scroll-duration, 30s) linear infinite;
+  animation: scroll-up var(--scroll-duration, 20s) linear infinite;
+  -webkit-animation: scroll-up var(--scroll-duration, 20s) linear infinite;
 }
 
 /* Updated scroll card styling */
@@ -8581,6 +8581,7 @@ p>a {
   flex-shrink: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  display: block;
 }
 
 /* Mobile-specific tournament section styles */

@@ -5,20 +5,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeIcon = document.getElementById('close-icon');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const body = document.body;
+    let scrollPosition = 0;
 
-    // Toggle Menu Function
-    const toggleMenu = () => {
-        const isOpening = !mobileMenu.classList.contains('active');
+    if (!menuToggle || !mobileMenu) {
+        console.error('Menu elements not found!');
+        return;
+    }
+
+    // Toggle Menu Function with scroll position preservation
+    const toggleMenu = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
         
-        mobileMenu.classList.toggle('active');
-        body.classList.toggle('no-scroll');
-
-        if (isOpening) {
-            menuIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
+        const isActive = mobileMenu.classList.contains('active');
+        
+        if (isActive) {
+            // Close menu - restore scroll position
+            mobileMenu.classList.remove('active');
+            body.classList.remove('no-scroll');
+            body.style.top = '';
+            window.scrollTo(0, scrollPosition);
+            
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
         } else {
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
+            // Open menu - save scroll position and lock
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            mobileMenu.classList.add('active');
+            body.classList.add('no-scroll');
+            body.style.top = `-${scrollPosition}px`;
+            
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
         }
     };
 

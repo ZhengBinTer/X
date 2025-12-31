@@ -536,7 +536,7 @@
         <div
           class="gap-4 flex max-w-screen-2xl mx-auto items-center justify-between p-4 lg:p-6 xl:p-8 group-[.header-scrolled]:p-4 transition-all">
           <div class="shrink-0 grid place-items-center">
-            <a class="inline-block" id="header-icon-natural8" href="#navigation-header">
+            <a class="inline-block cursor-pointer" id="header-icon-natural8" href="#">
               <picture>
                 <source type="image/webp"><img src="Xpoker_image/Xpoker_Logo.png" alt="Natural8 logo"
                   class="h-8 w-auto sm:h-10" loading="eager" fetchpriority="high">
@@ -626,6 +626,60 @@
         } else {
           nav.classList.remove('scrolled');
         }
+      });
+    </script>
+
+    <!-- Smooth Scroll with Optimal Positioning for Navigation Links -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Select all navigation links that point to sections
+        const navLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              e.preventDefault();
+
+              // Get the header height for offset calculation
+              const header = document.getElementById('navigation-header');
+              const headerHeight = header ? header.offsetHeight : 80;
+
+              const elementRect = targetElement.getBoundingClientRect();
+              const absoluteElementTop = elementRect.top + window.pageYOffset;
+
+
+              let scrollToPosition;
+              if (targetId === '#navigation-header') {
+                // Scroll to very top of the page
+                scrollToPosition = 0;
+              } else if (targetId === '#buy-chips-section') {
+                // Center the section in the viewport
+                scrollToPosition = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
+              } else {
+                // Default: position just below header
+                const offset = headerHeight - 30;
+                scrollToPosition = absoluteElementTop - offset;
+              }
+
+              window.scrollTo({
+                top: scrollToPosition,
+                behavior: 'smooth'
+              });
+
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById('mobile-menu');
+              if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                document.getElementById('menu-icon').classList.remove('hidden');
+                document.getElementById('close-icon').classList.add('hidden');
+              }
+            }
+          });
+        });
       });
     </script>
 
@@ -1073,6 +1127,7 @@
         </h2>
       </div>
     -->
+    <!-- A sentences between the container/section -->
 
     <section id="buy-chips-section" class="container mx-auto px-0 py-0" style="overflow: visible;">
 
@@ -1093,6 +1148,112 @@
 
         .gradient-pulse {
           animation: gradientPulse 2s ease-in-out infinite;
+        }
+
+        /* Payment Card - Rotating gradient border effect */
+        .payment-card-wrapper {
+          width: 280px;
+          height: 280px;
+          background: #171717;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0px 0px 3px 1px #00000088;
+          cursor: pointer;
+          border-radius: 20px;
+        }
+
+        /* Rotating gradient - different colors for each card */
+        .payment-card-wrapper::before {
+          opacity: 0;
+          content: " ";
+          position: absolute;
+          display: block;
+          width: 100px;
+          height: 400px;
+          transition: opacity 300ms;
+          animation: rotation_9018 8000ms infinite linear;
+          animation-play-state: paused;
+        }
+
+        .payment-card-wrapper.blue::before {
+          background: linear-gradient(#3700ff, #00ff75);
+        }
+
+        .payment-card-wrapper.red::before {
+          background: linear-gradient(#ff0000, #ff8c00);
+        }
+
+        .payment-card-wrapper.green::before {
+          background: linear-gradient(#00ff75, #00ff75);
+        }
+
+        .payment-card-wrapper:hover::before {
+          opacity: 1;
+          animation-play-state: running;
+        }
+
+        /* Backdrop blur layer */
+        .payment-card-wrapper::after {
+          position: absolute;
+          content: " ";
+          display: block;
+          width: 280px;
+          height: 280px;
+          background: #17171733;
+          backdrop-filter: blur(50px);
+          border-radius: 20px;
+        }
+
+        @keyframes rotation_9018 {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        /* Inner content */
+        .payment-card-inner {
+          border-radius: 20px;
+          background: #171717;
+          width: calc(100% - 8px);
+          height: calc(100% - 8px);
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+        }
+
+        /* White glow on hover */
+        .payment-card-inner::before {
+          opacity: 0;
+          transition: opacity 300ms;
+          content: " ";
+          display: block;
+          background: white;
+          width: 10px;
+          height: 100px;
+          position: absolute;
+          filter: blur(50px);
+          overflow: hidden;
+        }
+
+        .payment-card-wrapper:hover .payment-card-inner::before {
+          opacity: 1;
+        }
+
+        .payment-card-inner img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
         }
       </style>
 
@@ -1122,29 +1283,32 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Bank Transfer Card -->
           <div class="group flex flex-col items-center relative">
-            <div class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
-              <img src="Webite_Final_PNG/Button_转账.png" alt="網銀轉帳"
-                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110" loading="lazy">
-              <p class="text-white text-lg font-semibold mt-4 relative z-20">網銀轉帳</p>
+            <div class="payment-card-wrapper blue">
+              <div class="payment-card-inner">
+                <img src="Webite_Final_PNG/Button_转账.png" alt="網銀轉帳" loading="lazy">
+              </div>
             </div>
+            <p class="text-white text-4xl font-semibold mt-4">網銀轉帳</p>
           </div>
 
           <!-- JKOPAY Card -->
           <div class="group flex flex-col items-center relative">
-            <div class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
-              <img src="Webite_Final_PNG/Button_街口.png" alt="街口支付"
-                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110" loading="lazy">
-              <p class="text-white text-lg font-semibold mt-4 relative z-20">街口支付</p>
+            <div class="payment-card-wrapper red">
+              <div class="payment-card-inner">
+                <img src="Webite_Final_PNG/Button_街口.png" alt="街口支付" loading="lazy">
+              </div>
             </div>
+            <p class="text-white text-4xl font-semibold mt-4">街口支付</p>
           </div>
 
           <!-- USDT Card -->
           <div class="group flex flex-col items-center relative">
-            <div class="relative w-full max-w-xs flex flex-col items-center justify-center p-6 z-10">
-              <img src="Webite_Final_PNG/Button_USDT.png" alt="虛擬貨幣 USDT"
-                class="w-32 h-32 object-contain mb-4 relative z-20 transition-transform duration-300 group-hover:scale-110" loading="lazy">
-              <p class="text-white text-lg font-semibold mt-4 relative z-20">虛擬貨幣 USDT</p>
+            <div class="payment-card-wrapper green">
+              <div class="payment-card-inner">
+                <img src="Webite_Final_PNG/Button_USDT.png" alt="虛擬貨幣 USDT" loading="lazy">
+              </div>
             </div>
+            <p class="text-white text-4xl font-semibold mt-4">虛擬貨幣 USDT</p>
           </div>
         </div>
       </div>
@@ -1263,7 +1427,7 @@
             <p class="max-w-2xl mb-6 text-base text-white/90 leading-relaxed">
               X-Poker 錦標賽提供每日多場不同的比賽，每位玩家有固定籌碼，輸光即淘汰，最後一人贏光所有籌碼成為冠軍！比賽節奏快、玩法多、獎勵豐厚，隨時都能挑戰自己的策略和技 巧，享受公平又精彩的撲克對決！
             </p>
-            <a href="#tournaments" class="inline-block w-full lg:w-auto">
+            <a href="https://lin.ee/MWsYX7D" target="_blank" class="inline-block w-full lg:w-auto">
               <button
                 class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
                 查看所有錦標賽
@@ -1491,8 +1655,8 @@
                 <!-- Icon -->
                 <div class="flex justify-center mt-12 mb-6">
                   <div
-                    class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
                       </path>
@@ -1527,12 +1691,12 @@
                 <!-- Icons from UI/UX team -->
                 <div class="flex justify-center gap-4 mt-12 mb-6">
                   <img src="Webite_Final_PNG/Icon_简单.png" alt="簡單"
-                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" loading="lazy" />
+                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" loading="lazy" />
                   <img src="Webite_Final_PNG/Icon_安全.png" alt="安全"
-                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     style="transition-delay: 0.1s;" loading="lazy" />
                   <img src="Webite_Final_PNG/Icon_可靠.png" alt="可靠"
-                    class="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     style="transition-delay: 0.2s;" loading="lazy" />
                 </div>
 
@@ -1563,8 +1727,8 @@
                 <!-- Icon -->
                 <div class="flex justify-center mt-12 mb-6">
                   <div
-                    class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                     </svg>
@@ -1603,8 +1767,8 @@
                 <!-- Icon -->
                 <div class="flex justify-center mt-12 mb-6">
                   <div
-                    class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
@@ -1638,8 +1802,8 @@
                 <!-- Icon -->
                 <div class="flex justify-center mt-12 mb-6">
                   <div
-                    class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
                       </path>

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeIcon = document.getElementById('close-icon');
     const mobileCloseBtn = document.getElementById('mobile-close-btn');
     const body = document.body;
+    const html = document.documentElement;
     let scrollPosition = 0;
 
     if (!menuToggle || !mobileMenu) {
@@ -25,8 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close menu - restore scroll position
             mobileMenu.classList.remove('active');
             body.classList.remove('no-scroll');
+            body.style.position = '';
             body.style.top = '';
-            window.scrollTo(0, scrollPosition);
+            body.style.width = '';
+            body.style.left = '';
+            body.style.right = '';
+            
+            // Use requestAnimationFrame to ensure DOM is updated before scrolling
+            requestAnimationFrame(() => {
+                window.scrollTo(0, scrollPosition);
+            });
             
             if (menuIcon && closeIcon) {
                 menuIcon.classList.remove('hidden');
@@ -35,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Open menu - save scroll position and lock
             scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-            mobileMenu.classList.add('active');
             body.classList.add('no-scroll');
             body.style.top = `-${scrollPosition}px`;
+            mobileMenu.classList.add('active');
             
             if (menuIcon && closeIcon) {
                 menuIcon.classList.add('hidden');
@@ -63,4 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Ensure scroll is not locked on page load or resize
+    const ensureScrollEnabled = () => {
+        if (!mobileMenu.classList.contains('active')) {
+            body.classList.remove('no-scroll');
+            body.style.position = '';
+            body.style.top = '';
+            body.style.width = '';
+            body.style.left = '';
+            body.style.right = '';
+        }
+    };
+
+    // Check on resize and page visibility change
+    window.addEventListener('resize', ensureScrollEnabled);
+    document.addEventListener('visibilitychange', ensureScrollEnabled);
+    
+    // Initial check
+    ensureScrollEnabled();
 });

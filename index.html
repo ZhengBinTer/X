@@ -497,10 +497,6 @@
         line-height: 1;
       }
 
-      body.no-scroll {
-        overflow: hidden;
-      }
-
       /* Mobile hamburger button styling */
       #menu-toggle {
         display: none;
@@ -511,7 +507,7 @@
         padding: 0.5rem;
       }
       
-      /* Ensure body scroll lock works without jumping to top */
+      /* Only lock scroll when mobile menu is open */
       body.no-scroll {
         overflow: hidden !important;
         position: fixed !important;

@@ -88,7 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check on resize and page visibility change
     window.addEventListener('resize', ensureScrollEnabled);
     document.addEventListener('visibilitychange', ensureScrollEnabled);
+    window.addEventListener('pageshow', ensureScrollEnabled);
     
-    // Initial check
+    // Initial check - CRITICAL for preventing scroll lock on load
     ensureScrollEnabled();
+    
+    // Double-check after a brief delay to catch any late-loading issues
+    setTimeout(ensureScrollEnabled, 50);
+    setTimeout(ensureScrollEnabled, 200);
 });

@@ -468,6 +468,34 @@
           display: none !important;
         }
       }
+      
+      /* Fix mobile scroll trapping caused by blob gradients */
+      @media (max-width: 768px) {
+        /* Reduce blob gradient sizes on mobile to prevent scroll interference */
+        .blob-tl-blue:before,
+        .blob-r-blue:after,
+        .blob-tl-purple:before,
+        .blob-r-pink:after {
+          width: 80vw !important;
+          height: 80vw !important;
+          filter: blur(100px) !important;
+          opacity: 0.2 !important;
+        }
+        
+        /* Ensure sections allow proper scroll behavior on mobile */
+        section {
+          position: relative !important;
+          overflow: visible !important;
+          -webkit-overflow-scrolling: touch !important;
+        }
+        
+        /* Prevent blob gradients from interfering with touch events */
+        section:before,
+        section:after {
+          pointer-events: none !important;
+          touch-action: none !important;
+        }
+      }
 
       .search-input {
         width: 100%;

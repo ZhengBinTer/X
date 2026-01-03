@@ -63,12 +63,31 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileCloseBtn.addEventListener('click', toggleMenu);
     }
 
-    // Close menu when clicking a link
+    // Close menu when clicking a link - DON'T preventDefault, let smooth scroll handle it
     const mobileLinks = document.querySelectorAll('.mobile-link');
     mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             if (mobileMenu.classList.contains('active')) {
-                toggleMenu();
+                // Close menu immediately
+                mobileMenu.classList.remove('active');
+                body.classList.remove('no-scroll');
+                body.style.position = '';
+                body.style.top = '';
+                body.style.width = '';
+                body.style.left = '';
+                body.style.right = '';
+                
+                // Restore scroll position immediately
+                window.scrollTo(0, scrollPosition);
+                
+                // Toggle icons
+                if (menuIcon && closeIcon) {
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+                
+                // Let the smooth scroll script in HTML handle the navigation
+                // (Don't call e.preventDefault() here)
             }
         });
     });

@@ -674,17 +674,19 @@
               const elementRect = targetElement.getBoundingClientRect();
               const absoluteElementTop = elementRect.top + window.pageYOffset;
 
+              // Check if mobile viewport (768px or less)
+              const isMobile = window.innerWidth <= 768;
 
               let scrollToPosition;
               if (targetId === '#navigation-header') {
                 // Scroll to very top of the page
                 scrollToPosition = 0;
-              } else if (targetId === '#buy-chips-section') {
-                // Center the section in the viewport
+              } else if (targetId === '#buy-chips-section' && !isMobile) {
+                // Center the section in the viewport (desktop only)
                 scrollToPosition = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
               } else {
-                // Default: position just below header
-                const offset = headerHeight - 30;
+                // Default: position just below header (mobile always uses this)
+                const offset = isMobile ? headerHeight + 20 : headerHeight - 30;
                 scrollToPosition = absoluteElementTop - offset;
               }
 
@@ -945,7 +947,7 @@
       </div>
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none" loading="lazy" />
+        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none" loading="eager" fetchpriority="high" />
       </div>
 
     </section>

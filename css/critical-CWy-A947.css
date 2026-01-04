@@ -8538,6 +8538,9 @@ p>a {
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
+  /* Prevent flashing by ensuring smooth rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* DOWN - scrolls content upward */
@@ -8565,11 +8568,15 @@ p>a {
 .scroll-down {
   animation: scroll-down var(--scroll-duration, 20s) linear infinite;
   -webkit-animation: scroll-down var(--scroll-duration, 20s) linear infinite;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .scroll-up {
   animation: scroll-up var(--scroll-duration, 20s) linear infinite;
   -webkit-animation: scroll-up var(--scroll-duration, 20s) linear infinite;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 /* Updated scroll card styling */
@@ -8582,6 +8589,20 @@ p>a {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   display: block;
+  /* Prevent image flashing */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Prevent flashing in scroll columns */
+#tournaments .flex-1 {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+#tournaments .relative.overflow-hidden {
+  isolation: isolate;
 }
 
 /* Mobile-specific tournament section styles */
@@ -8645,9 +8666,9 @@ p>a {
     padding-bottom: 1.25rem !important;
   }
   
-  /* Optimized height for iPhone screens - showing 3 columns with 2 visible cards each */
-  #tournaments .relative.h-\[850px\] {
-    height: 380px !important;
+  /* Optimized height for iPhone screens - showing 1.5 cards for peek effect */
+  #tournaments .relative.h-\[650px\] {
+    height: 320px !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     margin-top: 0.75rem;
@@ -8696,8 +8717,8 @@ p>a {
 
 /* Tablet specific adjustments */
 @media (min-width: 768px) and (max-width: 1023px) {
-  #tournaments .relative.h-\[850px\] {
-    height: 600px !important;
+  #tournaments .relative.h-\[650px\] {
+    height: 500px !important;
   }
   
   #tournaments .h-full.px-6 {

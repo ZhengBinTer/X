@@ -378,13 +378,13 @@
 
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZBZQFP" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <main class="z-10 relative bg-black">
+  <main class="z-10 relative bg-black flex-grow">
     <div id="notification-bar">
       <div id="notificationBanner">
         <div class="w-full h-full bg-gradient-to-r from-blue-800 to-blue-700 absolute top-0 left-0 -z-20"></div>
@@ -408,7 +408,7 @@
       }
 
       main {
-        overflow: visible !important;
+        overflow: clip;
       }
 
       #navigation-header {
@@ -1892,8 +1892,20 @@
     </section>
 
     <!--QNA-Section-->
-    <section class="container mx-auto px-6 lg:px-20 py-24 blob-tl-blue" id="faq">
+    <section class="container mx-auto px-6 lg:px-20 py-24 blob-tl-blue" id="faq" style="padding-bottom: 200px;">
       <style>
+        /* FAQ Section - Extend blob gradient beyond section */
+        #faq {
+          position: relative;
+          overflow: visible;
+        }
+
+        /* Extend the blob gradient further down */
+        #faq.blob-tl-blue:before {
+          height: 150% !important;
+          top: -10% !important;
+        }
+
         details.group summary svg path:last-child {
           display: block;
         }
@@ -2030,16 +2042,16 @@
         </div>
       </div>
     </section>
-</body>
 
-<!-- Footer -->
-<!-- This bassically havent done yet, wait other for thw content insertion -->
-<footer class="bg-black py-6 mt-12">
-  <div class="container mx-auto text-center">
-    <p class="font-semibold text-white">免責聲明</p>
+  </main>
 
-    <p class="text-zinc-400 text-sm mt-6 mb-4">
-      愛玩多玩 還要玩 想贏錢 就來 X-Poker 線上德州撲克平台！
+  <!-- Footer -->
+  <footer class="bg-transparent py-6 mt-auto relative z-10" style="margin-top: -150px;">
+    <div class="container mx-auto text-center">
+      <p class="font-semibold text-white">免責聲明</p>
+
+      <p class="text-zinc-400 text-sm mt-6 mb-4">
+        愛玩多玩 還要玩 想贏錢 就來 X-Poker 線上德州撲克平台！
       違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
     </p>
 
@@ -2048,5 +2060,7 @@
     </p>
   </div>
 </footer>
+
+</body>
 
 </html>

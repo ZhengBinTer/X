@@ -91,7 +91,7 @@
 
   <!-- Google Tag Manager -->
   <script>
-    (function (w, d, s, l, i) {
+    (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
         'gtm.start': new Date().getTime(),
@@ -111,7 +111,7 @@
   <!-- Start VWO Async SmartCode -->
   <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com">
   <script type="text/javascript" id="vwoCode">
-    window._vwo_code || (function () {
+    window._vwo_code || (function() {
       var account_id = 856896,
         version = 2.1,
         settings_tolerance = 2000,
@@ -127,42 +127,42 @@
       try {
         var c = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config'));
         cc = c && typeof c === 'object' ? c : {}
-      } catch (e) { }
+      } catch (e) {}
       var stT = cc.stT === 'session' ? w.sessionStorage : w.localStorage;
       code = {
-        use_existing_jquery: function () {
+        use_existing_jquery: function() {
           return typeof use_existing_jquery !== 'undefined' ? use_existing_jquery : undefined
         },
-        library_tolerance: function () {
+        library_tolerance: function() {
           return typeof library_tolerance !== 'undefined' ? library_tolerance : undefined
         },
-        settings_tolerance: function () {
+        settings_tolerance: function() {
           return cc.sT || settings_tolerance
         },
-        hide_element_style: function () {
+        hide_element_style: function() {
           return '{' + (cc.hES || hide_element_style) + '}'
         },
-        hide_element: function () {
+        hide_element: function() {
           if (performance.getEntriesByName('first-contentful-paint')[0]) {
             return ''
           }
           return typeof cc.hE === 'string' ? cc.hE : hide_element
         },
-        getVersion: function () {
+        getVersion: function() {
           return version
         },
-        finish: function (e) {
+        finish: function(e) {
           if (!f) {
             f = true;
             var t = d.getElementById('_vis_opt_path_hides');
             if (t) t.parentNode.removeChild(t);
-            if (e) (new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e
+            if (e)(new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e
           }
         },
-        finished: function () {
+        finished: function() {
           return f
         },
-        addScript: function (e) {
+        addScript: function(e) {
           var t = d.createElement('script');
           t.type = 'text/javascript';
           if (e.src) {
@@ -172,7 +172,7 @@
           }
           d.getElementsByTagName('head')[0].appendChild(t)
         },
-        load: function (e, t) {
+        load: function(e, t) {
           var i = this.getSettings(),
             n = d.createElement('script'),
             r = this;
@@ -189,7 +189,7 @@
             o.open('GET', e, true);
             o.withCredentials = !t.dSC;
             o.responseType = t.responseType || 'text';
-            o.onload = function () {
+            o.onload = function() {
               if (t.onloadCb) {
                 return t.onloadCb(o, e)
               }
@@ -201,7 +201,7 @@
                 _vwo_code.finish('&e=loading_failure:' + e)
               }
             };
-            o.onerror = function () {
+            o.onerror = function() {
               if (t.onerrorCb) {
                 return t.onerrorCb(e)
               }
@@ -210,7 +210,7 @@
             o.send()
           }
         },
-        getSettings: function () {
+        getSettings: function() {
           try {
             var e = stT.getItem(cK);
             if (!e) {
@@ -226,10 +226,10 @@
             return
           }
         },
-        init: function () {
+        init: function() {
           if (d.URL.indexOf('__vwo_disable__') > -1) return;
           var e = this.settings_tolerance();
-          w._vwo_settings_timer = setTimeout(function () {
+          w._vwo_settings_timer = setTimeout(function() {
             _vwo_code.finish();
             stT.removeItem(cK)
           }, e);
@@ -273,26 +273,26 @@
 
   <!-- Posthog Start-->
   <script>
-    ! function (t, e) {
+    ! function(t, e) {
       var o, n, p, r;
-      e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) {
+      e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
         function g(t, e) {
           var o = e.split(".");
-          2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () {
+          2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() {
             t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
           }
-        } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p
+        }(p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p
           .src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t
             .getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
         var u = e;
-        for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) {
-          var e = "posthog";
-          return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
-        }, u.people.toString = function () {
-          return u.toString(1) + ".people (stub)"
-        }, o =
+        for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
+            var e = "posthog";
+            return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+          }, u.people.toString = function() {
+            return u.toString(1) + ".people (stub)"
+          }, o =
           "init Ce js Ls Te Fs Ds capture Ye calculateEventProperties Us register register_once register_for_session unregister unregister_for_session Ws getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Bs zs createPersonProfile Hs Ms Gs opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ns debug L qs getPageViewId captureTraceFeedback captureTraceMetric"
-            .split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+          .split(" "), n = 0; n < o.length; n++) g(u, o[n]);
         e._i.push([i, s, a])
       }, e.__SV = 1)
     }(document, window.posthog || []);
@@ -329,6 +329,19 @@
 
   <!-- Mobile Viewport Fix -->
   <style>
+    /* Global Fix - Prevent Horizontal Scroll */
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      max-width: 100vw;
+    }
+
+    * {
+      max-width: 100%;
+    }
+
     /* Fix for mobile viewport ONLY */
     @media (max-width: 1024px) {
       html {
@@ -336,7 +349,7 @@
         width: 100%;
         position: relative;
       }
-      
+
       body {
         overflow-x: hidden;
         width: 100%;
@@ -344,17 +357,17 @@
         margin: 0;
         padding: 0;
       }
-      
+
       .container {
         overflow-x: hidden;
         width: 100%;
       }
-      
+
       section {
         overflow-x: hidden;
         width: 100%;
       }
-      
+
       /* Ensure images don't overflow on mobile */
       img {
         max-width: 100%;
@@ -387,7 +400,6 @@
 
     <div id="header-scroll-observer"></div>
 
-
     <!-- Navigation Bar part -->
     <style>
       /* Override body/main overflow that prevents sticky */
@@ -408,7 +420,7 @@
         will-change: transform;
         overflow: visible !important;
       }
-      
+
       /* When menu is open, make header fixed */
       body.no-scroll #navigation-header {
         position: fixed !important;
@@ -461,16 +473,17 @@
         opacity: 1;
         pointer-events: auto;
       }
-      
+
       /* Hide mobile menu on desktop */
       @media (min-width: 1024px) {
         .mobile-menu-overlay {
           display: none !important;
         }
       }
-      
+
       /* Fix mobile scroll trapping caused by blob gradients */
       @media (max-width: 768px) {
+
         /* Reduce blob gradient sizes on mobile to prevent scroll interference */
         .blob-tl-blue:before,
         .blob-r-blue:after,
@@ -481,14 +494,14 @@
           filter: blur(100px) !important;
           opacity: 0.2 !important;
         }
-        
+
         /* Ensure sections allow proper scroll behavior on mobile */
         section {
           position: relative !important;
           overflow: visible !important;
           -webkit-overflow-scrolling: touch !important;
         }
-        
+
         /* Prevent blob gradients from interfering with touch events */
         section:before,
         section:after {
@@ -534,7 +547,7 @@
         border-radius: 8px;
         padding: 0.5rem;
       }
-      
+
       /* Only lock scroll when mobile menu is open */
       body.no-scroll {
         overflow: hidden !important;
@@ -612,10 +625,12 @@
 
             <!-- Mobile Menu Toggle Button -->
             <button id="menu-toggle" class="text-white focus:outline-none z-[10001]" aria-label="Toggle menu">
-              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-              <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -658,25 +673,19 @@
       document.addEventListener('DOMContentLoaded', function() {
         // Select all navigation links that point to sections
         const navLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
-
         navLinks.forEach(link => {
           link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-
             if (targetElement) {
               e.preventDefault();
-
               // Get the header height for offset calculation
               const header = document.getElementById('navigation-header');
               const headerHeight = header ? header.offsetHeight : 80;
-
               const elementRect = targetElement.getBoundingClientRect();
               const absoluteElementTop = elementRect.top + window.pageYOffset;
-
               // Check if mobile viewport (768px or less)
               const isMobile = window.innerWidth <= 768;
-
               let scrollToPosition;
               if (targetId === '#navigation-header') {
                 // Scroll to very top of the page
@@ -689,12 +698,10 @@
                 const offset = isMobile ? headerHeight + 20 : headerHeight - 30;
                 scrollToPosition = absoluteElementTop - offset;
               }
-
               window.scrollTo({
                 top: scrollToPosition,
                 behavior: 'smooth'
               });
-
               // Close mobile menu if open
               const mobileMenu = document.getElementById('mobile-menu');
               if (mobileMenu && mobileMenu.classList.contains('active')) {
@@ -825,13 +832,13 @@
           height: 32px;
         }
       }
-      
+
       /* Hide text on very small screens to prevent overflow */
       @media (max-width: 480px) {
         .line-cs-text {
           display: none;
         }
-        
+
         .line-cs-container {
           gap: 0;
         }
@@ -864,7 +871,8 @@
       <div class="flex-1">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight">
           提升你的
-          <span class="block mt-4" style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          <span class="block mt-4"
+            style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
             線上撲克體驗
           </span>
         </h2>
@@ -873,7 +881,8 @@
           X-Poker 是最熱門的線上德州撲克平台，提供 24 小時桌況與真人對決，並提供專 業客服支援，協助玩家在遊戲過程中獲得支援，帶來穩定且公平的遊戲體驗。熱血對決，等您來挑戰！
         </p>
 
-        <div class="mt-10 mb-8 md:mb-0 flex flex-nowrap md:flex-wrap gap-3 md:gap-4 overflow-x-auto md:overflow-x-visible pb-2">
+        <div
+          class="mt-10 mb-8 md:mb-0 flex flex-nowrap md:flex-wrap gap-3 md:gap-4 overflow-x-auto md:overflow-x-visible pb-2">
           <a href="#club-section" class="inline-block flex-shrink-0">
             <button
               class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
@@ -947,7 +956,8 @@
       </div>
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none" loading="eager" fetchpriority="high" />
+        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none"
+          loading="eager" fetchpriority="high" />
       </div>
 
     </section>
@@ -967,19 +977,24 @@
       </div>
       <!-- Club Cards Grid - Card Style Design -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        
+
         <!-- Club Card 1: 泡泡軟糖 -->
         <div class="group relative">
-          <div class="absolute -inset-2 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-          <div class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(168,85,247,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+          <div
+            class="absolute -inset-2 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
+          </div>
+          <div
+            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(168,85,247,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
-                <div class="w-40 h-40 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain" loading="lazy">
+                <div
+                  class="w-40 h-40 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain"
+                    loading="lazy">
                 </div>
               </div>
-              
+
               <!-- Content -->
               <div class="flex-1">
                 <h5 class="text-white text-2xl font-bold mb-3">🫧泡泡軟糖🫧俱樂部</h5>
@@ -994,16 +1009,21 @@
 
         <!-- Club Card 2: Baby Sharks -->
         <div class="group relative">
-          <div class="absolute -inset-2 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-          <div class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(59,130,246,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+          <div
+            class="absolute -inset-2 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
+          </div>
+          <div
+            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(59,130,246,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
-                <div class="w-40 h-40 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain" loading="lazy">
+                <div
+                  class="w-40 h-40 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain"
+                    loading="lazy">
                 </div>
               </div>
-              
+
               <!-- Content -->
               <div class="flex-1">
                 <h5 class="text-white text-2xl font-bold mb-3">Baby Sharks 俱樂部</h5>
@@ -1018,16 +1038,21 @@
 
         <!-- Club Card 3: M.P.C -->
         <div class="group relative">
-          <div class="absolute -inset-2 bg-gradient-to-br from-green-500/40 to-emerald-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-          <div class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(34,197,94,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+          <div
+            class="absolute -inset-2 bg-gradient-to-br from-green-500/40 to-emerald-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
+          </div>
+          <div
+            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(34,197,94,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
-                <div class="w-40 h-40 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_马来西亚.png" alt="Malaysia" class="w-32 h-32 object-contain" loading="lazy">
+                <div
+                  class="w-40 h-40 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="Webite_Final_PNG/Country_马来西亚.png" alt="Malaysia" class="w-32 h-32 object-contain"
+                    loading="lazy">
                 </div>
               </div>
-              
+
               <!-- Content -->
               <div class="flex-1">
                 <h5 class="text-white text-2xl font-bold mb-3">M.P.C 俱樂部</h5>
@@ -1042,16 +1067,21 @@
 
         <!-- Club Card 4: Variance Rider -->
         <div class="group relative">
-          <div class="absolute -inset-2 bg-gradient-to-br from-orange-500/40 to-red-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
-          <div class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(249,115,22,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+          <div
+            class="absolute -inset-2 bg-gradient-to-br from-orange-500/40 to-red-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
+          </div>
+          <div
+            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(249,115,22,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
-                <div class="w-40 h-40 rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_菲律宾.png" alt="Philippines" class="w-32 h-32 object-contain" loading="lazy">
+                <div
+                  class="w-40 h-40 rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="Webite_Final_PNG/Country_菲律宾.png" alt="Philippines" class="w-32 h-32 object-contain"
+                    loading="lazy">
                 </div>
               </div>
-              
+
               <!-- Content -->
               <div class="flex-1">
                 <h5 class="text-white text-2xl font-bold mb-3">Variance Rider 俱樂部</h5>
@@ -1063,7 +1093,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
 
       <!-- More Clubs Button -->
@@ -1379,9 +1409,12 @@
           <!-- PLO -->
           <div class="game-card yellow">
             <div class="flex justify-center items-center mb-6 h-32 gap-1 overflow-hidden px-2">
-              <img src="Webite_Final_PNG/Game_PLO4.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO4" loading="lazy">
-              <img src="Webite_Final_PNG/Game_PLO5.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO5" loading="lazy">
-              <img src="Webite_Final_PNG/Game_PLO6.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO6" loading="lazy">
+              <img src="Webite_Final_PNG/Game_PLO4.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO4"
+                loading="lazy">
+              <img src="Webite_Final_PNG/Game_PLO5.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO5"
+                loading="lazy">
+              <img src="Webite_Final_PNG/Game_PLO6.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO6"
+                loading="lazy">
             </div>
             <h3 class="card-title text-yellow-400">PLO 奧馬哈</h3>
             <p class="card-text">
@@ -1445,7 +1478,8 @@
     <section class="container px-0 py-20" id="tournaments">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         <!-- Left Content -->
-        <div class="h-full px-6 lg:px-24 bg-transparent lg:bg-black relative flex items-center py-12 order-1 lg:order-1">
+        <div
+          class="h-full px-6 lg:px-24 bg-transparent lg:bg-black relative flex items-center py-12 order-1 lg:order-1">
           <div class="w-full">
             <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">
               線上<span class="gradient-text-cyan">撲克錦標賽</span>
@@ -1552,7 +1586,8 @@
       class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG1.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none" loading="lazy" />
+        <img src="Webite_Final_PNG/IMG1.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none"
+          loading="lazy" />
       </div>
 
       <div class="flex-1 lg:pl-[200px]">
@@ -1564,12 +1599,12 @@
           X-Poker APP下載超方便，支援 iOS、Android 以及 Windows 版本，一鍵安裝即可開始遊戲。
         </p>
 
-        <div class="mt-10 flex flex-col gap-4 px-4 md:px-8 lg:px-0 max-w-md mx-auto lg:mx-0 lg:max-w-none">
+        <div class="mt-10 flex flex-col gap-4 px-0 max-w-xl mx-auto lg:mx-0">
           <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447" target="_blank" rel="nofollow"
             class="inline-block">
             <div
-              class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
-              <div class="relative flex items-center gap-3 z-10">
+              class="slide-button relative bg-white rounded-lg px-6 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10 justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" />
@@ -1582,8 +1617,8 @@
           <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank"
             rel="nofollow" class="inline-block">
             <div
-              class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
-              <div class="relative flex items-center gap-3 z-10">
+              class="slide-button relative bg-white rounded-lg px-6 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10 justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
@@ -1596,8 +1631,8 @@
           <a href="https://static.x-game.net/version/website/X-Poker8.0.msi?t=1702934641" target="_blank" rel="nofollow"
             class="inline-block">
             <div
-              class="slide-button relative bg-white rounded-lg px-8 py-4 text-blue-600 transition duration-300 group overflow-hidden">
-              <div class="relative flex items-center gap-3 z-10">
+              class="slide-button relative bg-white rounded-lg px-6 py-4 text-blue-600 transition duration-300 group overflow-hidden">
+              <div class="relative flex items-center gap-3 z-10 justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M3,12V6.75L9,5.43V11.91L3,12M20,3V11.75L10,11.9V5.21L20,3M3,13L9,13.09V19.9L3,18.75V13M20,13.25V22L10,20.09V13.1L20,13.25Z" />
@@ -1717,7 +1752,8 @@
                 <!-- Icons from UI/UX team -->
                 <div class="flex justify-center gap-4 mt-12 mb-6">
                   <img src="Webite_Final_PNG/Icon_简单.png" alt="簡單"
-                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" loading="lazy" />
+                    class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                    loading="lazy" />
                   <img src="Webite_Final_PNG/Icon_安全.png" alt="安全"
                     class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     style="transition-delay: 0.1s;" loading="lazy" />
@@ -1994,24 +2030,23 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <!-- This bassically havent done yet, wait other for thw content insertion -->
-    <footer class="bg-black py-6 mt-12">
-      <div class="container mx-auto text-center">
-        <p class="font-semibold text-white">免責聲明</p>
-
-        <p class="text-zinc-400 text-sm mt-6 mb-4">
-          愛玩多玩 還要玩 想贏錢 就來 X-Poker 線上德州撲克平台！
-          違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
-        </p>
-
-        <p class="text-zinc-400 text-sm">
-          Copyright © 2024 X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
-        </p>
-      </div>
-    </footer>
-
 </body>
+
+<!-- Footer -->
+<!-- This bassically havent done yet, wait other for thw content insertion -->
+<footer class="bg-black py-6 mt-12">
+  <div class="container mx-auto text-center">
+    <p class="font-semibold text-white">免責聲明</p>
+
+    <p class="text-zinc-400 text-sm mt-6 mb-4">
+      愛玩多玩 還要玩 想贏錢 就來 X-Poker 線上德州撲克平台！
+      違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
+    </p>
+
+    <p class="text-zinc-400 text-sm">
+      Copyright © 2024 X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
+    </p>
+  </div>
+</footer>
 
 </html>

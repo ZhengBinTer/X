@@ -57,6 +57,7 @@
       width: 100%;
       position: relative;
       max-width: 100vw;
+      background-color: #000000;
     }
 
     * {
@@ -69,6 +70,7 @@
         overflow-x: hidden;
         width: 100%;
         position: relative;
+        background-color: #000000;
       }
 
       body {
@@ -77,6 +79,7 @@
         position: relative;
         margin: 0;
         padding: 0;
+        background-color: #000000;
       }
 
       .container {
@@ -186,15 +189,15 @@
       /* Fix mobile scroll trapping caused by blob gradients */
       @media (max-width: 768px) {
 
-        /* Reduce blob gradient sizes on mobile to prevent scroll interference */
+        /* Optimize blob gradient sizes on mobile for better visibility */
         .blob-tl-blue:before,
         .blob-r-blue:after,
         .blob-tl-purple:before,
         .blob-r-pink:after {
-          width: 80vw !important;
-          height: 80vw !important;
-          filter: blur(100px) !important;
-          opacity: 0.2 !important;
+          width: 100vw !important;
+          height: 100vw !important;
+          filter: blur(120px) !important;
+          opacity: 0.5 !important;
         }
 
         /* Ensure sections allow proper scroll behavior on mobile */
@@ -667,7 +670,7 @@
     <!-- Using a rectengle block for showing purpose -->
 
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
-    <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0 blob-tl-blue blob-r-blue">
+    <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0">
 
       <div class="text-center mb-12">
         <h2 class="text-5xl mb-4 font-bold">
@@ -887,9 +890,21 @@
     -->
     <!-- A sentences between the container/section -->
 
-    <section id="buy-chips-section" class="container mx-auto px-0 py-0" style="overflow: visible;">
+    <section id="buy-chips-section" class="container mx-auto px-0 py-0 blob-tl-blue" style="overflow: visible;">
 
       <style>
+        /* Buy Chips Section - Small subtle gradient on left side only (like FAQ section) */
+        @media (max-width: 768px) {
+          #buy-chips-section.blob-tl-blue:before {
+            width: 50vw !important;
+            height: 50vw !important;
+            filter: blur(80px) !important;
+            opacity: 0.3 !important;
+            top: 10% !important;
+            left: -30% !important;
+          }
+        }
+
         @keyframes gradientPulse {
 
           0%,
@@ -1074,7 +1089,7 @@
 
     <!-- Poker Cash Games Section (Staggered Layout like Reference) -->
     <section id="game-types-section"
-      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue"
+      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-r-blue"
       style="overflow: visible;">
       <div class="container mx-auto px-4">
 
@@ -1596,16 +1611,26 @@
     <!--QNA-Section-->
     <section class="container mx-auto px-6 lg:px-20 py-24 blob-tl-blue" id="faq" style="padding-bottom: 200px;">
       <style>
-        /* FAQ Section - Extend blob gradient beyond section */
+        /* FAQ Section - Extended gradient for seamless overlap with previous section */
         #faq {
           position: relative;
           overflow: visible;
         }
 
-        /* Extend the blob gradient further down */
+        /* Adjust blob gradient for smooth continuous transition */
         #faq.blob-tl-blue:before {
           height: 150% !important;
-          top: -10% !important;
+          top: -40% !important;
+          opacity: 0.45 !important;
+        }
+
+        /* Mobile-specific adjustments for FAQ gradient */
+        @media (max-width: 768px) {
+          #faq.blob-tl-blue:before {
+            height: 140% !important;
+            top: -30% !important;
+            opacity: 0.5 !important;
+          }
         }
 
         details.group summary svg path:last-child {

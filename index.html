@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
 
+  <link rel="icon" type="image/webp" href="Webite_Final_PNG/Xpoker_Logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="Webite_Final_PNG/Xpoker_Logo.webp">
   <link rel="icon" type="image/png" href="Webite_Final_PNG/Xpoker_Logo.png">
   <link rel="shortcut icon" type="image/png" href="Webite_Final_PNG/Xpoker_Logo.png">
 
@@ -15,7 +17,8 @@
   <meta property="og:title" content="X Poker - 線上撲克遊戲平台">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://your-domain.com">
-  <meta property="og:image" content="Webite_Final_PNG/Xpoker_Logo.png">
+  <meta property="og:image" content="Webite_Final_PNG/Xpoker_Logo.webp">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:description" content="X Poker 提供各種各樣的撲克遊戲和錦標賽，為新玩家提供豐厚的獎金和促銷活動。立即加入體驗精彩撲克遊戲！">
   <meta property="og:site_name" content="X Poker">
 
@@ -23,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="X Poker - 線上撲克遊戲平台">
   <meta name="twitter:description" content="X Poker 提供各種各樣的撲克遊戲和錦標賽，為新玩家提供豐厚的獎金和促銷活動。">
-  <meta name="twitter:image" content="Webite_Final_PNG/Xpoker_Logo.png">
+  <meta name="twitter:image" content="Webite_Final_PNG/Xpoker_Logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -38,7 +41,10 @@
       rel="stylesheet" type="text/css" />
   </noscript>
 
-  <link rel="stylesheet" href="css/critical-CWy-A947.css">
+  <link rel="preload" href="css/critical-CWy-A947.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/critical-CWy-A947.css">
+  </noscript>
   <link rel="prefetch" href="/vite/assets/application-CaT4H7d6.css" as="style">
 
   <script type="text/javascript">
@@ -280,8 +286,9 @@
           <div class="shrink-0 grid place-items-center">
             <a class="inline-block cursor-pointer" id="header-icon-natural8" href="#">
               <picture>
-                <source type="image/webp"><img src="Xpoker_image/Xpoker_Logo.png" alt="Natural8 logo"
-                  class="h-8 w-auto sm:h-10" loading="eager" fetchpriority="high">
+                <source srcset="Xpoker_image/Xpoker_Logo.webp" type="image/webp">
+                <img src="Xpoker_image/Xpoker_Logo.webp" alt="Natural8 logo" class="h-8 w-auto sm:h-10"
+                  loading="eager" fetchpriority="high">
               </picture>
             </a>
           </div>
@@ -426,7 +433,9 @@
       <div class="line-cs-container">
         <div class="line-cs-text">需要小編協助嗎？</div>
         <div class="line-cs-icon-wrapper">
-          <img src="Webite_Final_PNG/LINE_APP_Android.png" alt="LINE" class="line-cs-icon" loading="lazy" />
+          <img src="Webite_Final_PNG/LINE_APP_Android-32.webp"
+            srcset="Webite_Final_PNG/LINE_APP_Android-32.webp 32w, Webite_Final_PNG/LINE_APP_Android-64.webp 64w"
+            sizes="32px" alt="LINE" class="line-cs-icon" loading="lazy" />
           <span class="line-cs-badge">1</span>
         </div>
       </div>
@@ -657,8 +666,13 @@
       </div>
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG2.png" alt="X-Poker App Preview" class="max-w-[520px] w-full select-none"
-          loading="eager" fetchpriority="high" />
+        <picture>
+          <source
+            srcset="Webite_Final_PNG/IMG2-360.webp 360w, Webite_Final_PNG/IMG2-720.webp 720w"
+            sizes="(max-width: 768px) 90vw, 520px" type="image/webp">
+          <img src="Webite_Final_PNG/IMG2-360.webp" alt="X-Poker App Preview"
+            class="max-w-[520px] w-full select-none" loading="eager" fetchpriority="high" />
+        </picture>
       </div>
 
     </section>
@@ -691,8 +705,9 @@
               <div class="flex-shrink-0">
                 <div
                   class="w-40 h-40 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain"
-                    loading="lazy">
+                  <img src="Webite_Final_PNG/Country_台湾-128.webp"
+                    srcset="Webite_Final_PNG/Country_台湾-128.webp 128w, Webite_Final_PNG/Country_台湾-256.webp 256w"
+                    sizes="128px" alt="Taiwan" class="w-32 h-32 object-contain" loading="lazy">
                 </div>
               </div>
 
@@ -720,8 +735,9 @@
               <div class="flex-shrink-0">
                 <div
                   class="w-40 h-40 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_台湾.png" alt="Taiwan" class="w-32 h-32 object-contain"
-                    loading="lazy">
+                  <img src="Webite_Final_PNG/Country_台湾-128.webp"
+                    srcset="Webite_Final_PNG/Country_台湾-128.webp 128w, Webite_Final_PNG/Country_台湾-256.webp 256w"
+                    sizes="128px" alt="Taiwan" class="w-32 h-32 object-contain" loading="lazy">
                 </div>
               </div>
 
@@ -749,8 +765,9 @@
               <div class="flex-shrink-0">
                 <div
                   class="w-40 h-40 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_马来西亚.png" alt="Malaysia" class="w-32 h-32 object-contain"
-                    loading="lazy">
+                  <img src="Webite_Final_PNG/Country_马来西亚-128.webp"
+                    srcset="Webite_Final_PNG/Country_马来西亚-128.webp 128w, Webite_Final_PNG/Country_马来西亚-256.webp 256w"
+                    sizes="128px" alt="Malaysia" class="w-32 h-32 object-contain" loading="lazy">
                 </div>
               </div>
 
@@ -778,8 +795,9 @@
               <div class="flex-shrink-0">
                 <div
                   class="w-40 h-40 rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src="Webite_Final_PNG/Country_菲律宾.png" alt="Philippines" class="w-32 h-32 object-contain"
-                    loading="lazy">
+                  <img src="Webite_Final_PNG/Country_菲律宾-128.webp"
+                    srcset="Webite_Final_PNG/Country_菲律宾-128.webp 128w, Webite_Final_PNG/Country_菲律宾-256.webp 256w"
+                    sizes="128px" alt="Philippines" class="w-32 h-32 object-contain" loading="lazy">
                 </div>
               </div>
 
@@ -1054,7 +1072,9 @@
           <div class="group flex flex-col items-center relative">
             <div class="payment-card-wrapper blue">
               <div class="payment-card-inner">
-                <img src="Webite_Final_PNG/Button_转账.png" alt="網銀轉帳" loading="lazy">
+                <img src="Webite_Final_PNG/Button_转账-272.webp"
+                  srcset="Webite_Final_PNG/Button_转账-272.webp 272w, Webite_Final_PNG/Button_转账-544.webp 544w"
+                  sizes="272px" alt="網銀轉帳" loading="lazy">
               </div>
             </div>
             <p class="text-white text-4xl font-semibold mt-4">網銀轉帳</p>
@@ -1064,7 +1084,9 @@
           <div class="group flex flex-col items-center relative">
             <div class="payment-card-wrapper red">
               <div class="payment-card-inner">
-                <img src="Webite_Final_PNG/Button_街口.png" alt="街口支付" loading="lazy">
+                <img src="Webite_Final_PNG/Button_街口-272.webp"
+                  srcset="Webite_Final_PNG/Button_街口-272.webp 272w, Webite_Final_PNG/Button_街口-544.webp 544w"
+                  sizes="272px" alt="街口支付" loading="lazy">
               </div>
             </div>
             <p class="text-white text-4xl font-semibold mt-4">街口支付</p>
@@ -1074,7 +1096,9 @@
           <div class="group flex flex-col items-center relative">
             <div class="payment-card-wrapper green">
               <div class="payment-card-inner">
-                <img src="Webite_Final_PNG/Button_USDT.png" alt="虛擬貨幣 USDT" loading="lazy">
+                <img src="Webite_Final_PNG/Button_USDT-272.webp"
+                  srcset="Webite_Final_PNG/Button_USDT-272.webp 272w, Webite_Final_PNG/Button_USDT-544.webp 544w"
+                  sizes="272px" alt="虛擬貨幣 USDT" loading="lazy">
               </div>
             </div>
             <p class="text-white text-4xl font-semibold mt-4">虛擬貨幣 USDT</p>
@@ -1111,7 +1135,7 @@
           <!-- NLH -->
           <div class="game-card -translate-x-20 teal">
             <div class="flex justify-center mb-6">
-              <img src="Webite_Final_PNG/Game_NLH.png" class="h-32 w-auto" alt="NLH" loading="lazy">
+              <img src="Webite_Final_PNG/Game_NLH.webp" class="h-32 w-auto" alt="NLH" loading="lazy">
             </div>
             <h3 class="card-title text-teal-400">NLH 經典德州</h3>
             <p class="card-text">
@@ -1122,11 +1146,11 @@
           <!-- PLO -->
           <div class="game-card yellow">
             <div class="flex justify-center items-center mb-6 h-32 gap-1 overflow-hidden px-2">
-              <img src="Webite_Final_PNG/Game_PLO4.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO4"
+              <img src="Webite_Final_PNG/Game_PLO4.webp" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO4"
                 loading="lazy">
-              <img src="Webite_Final_PNG/Game_PLO5.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO5"
+              <img src="Webite_Final_PNG/Game_PLO5.webp" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO5"
                 loading="lazy">
-              <img src="Webite_Final_PNG/Game_PLO6.png" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO6"
+              <img src="Webite_Final_PNG/Game_PLO6.webp" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO6"
                 loading="lazy">
             </div>
             <h3 class="card-title text-yellow-400">PLO 奧馬哈</h3>
@@ -1138,7 +1162,7 @@
           <!-- Maubinh -->
           <div class="game-card translate-x-20 green">
             <div class="flex justify-center mb-6">
-              <img src="Webite_Final_PNG/Game_十三支.png" class="h-32 w-auto" alt="Maubinh" loading="lazy">
+              <img src="Webite_Final_PNG/Game_十三支.webp" class="h-32 w-auto" alt="Maubinh" loading="lazy">
             </div>
             <h3 class="card-title text-green-400">Maubinh 13張</h3>
             <p class="card-text">
@@ -1149,7 +1173,7 @@
           <!-- OFC -->
           <div class="game-card -translate-x-20 blue">
             <div class="flex justify-center mb-6">
-              <img src="Webite_Final_PNG/Game_OFC.png" class="h-32 w-auto" alt="OFC" loading="lazy">
+              <img src="Webite_Final_PNG/Game_OFC.webp" class="h-32 w-auto" alt="OFC" loading="lazy">
             </div>
             <h3 class="card-title text-blue-400">OFC 大菠蘿</h3>
             <p class="card-text">
@@ -1160,7 +1184,7 @@
           <!-- AOF -->
           <div class="game-card red">
             <div class="flex justify-center mb-6">
-              <img src="Webite_Final_PNG/Game_AOF.png" class="h-32 w-auto" alt="AOF" loading="lazy">
+              <img src="Webite_Final_PNG/Game_AOF.webp" class="h-32 w-auto" alt="AOF" loading="lazy">
             </div>
             <h3 class="card-title text-red-400">AOF 全壓 / 棄牌</h3>
             <p class="card-text">
@@ -1171,7 +1195,7 @@
           <!-- 6+ Short Deck -->
           <div class="game-card translate-x-20 orange">
             <div class="flex justify-center mb-6">
-              <img src="Webite_Final_PNG/Game_6+.png" class="h-32 w-auto" alt="Short Deck" loading="lazy">
+              <img src="Webite_Final_PNG/Game_6+.webp" class="h-32 w-auto" alt="Short Deck" loading="lazy">
             </div>
             <h3 class="card-title text-orange-400">6+ 短牌</h3>
             <p class="card-text">
@@ -1218,16 +1242,32 @@
               <div class="scroll-track scroll-down" style="--scroll-duration: 20s;">
 
                 <!-- ORIGINAL -->
-                <img src="poker tournament/t5.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t6.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t7.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t8.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t5-210.webp"
+                  srcset="poker tournament/t5-210.webp 210w, poker tournament/t5-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t6-210.webp"
+                  srcset="poker tournament/t6-210.webp 210w, poker tournament/t6-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t7-210.webp"
+                  srcset="poker tournament/t7-210.webp 210w, poker tournament/t7-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t8-210.webp"
+                  srcset="poker tournament/t8-210.webp 210w, poker tournament/t8-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
                 <!-- DUPLICATE (exact same order) -->
-                <img src="poker tournament/t5.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t6.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t7.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t8.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t5-210.webp"
+                  srcset="poker tournament/t5-210.webp 210w, poker tournament/t5-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t6-210.webp"
+                  srcset="poker tournament/t6-210.webp 210w, poker tournament/t6-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t7-210.webp"
+                  srcset="poker tournament/t7-210.webp 210w, poker tournament/t7-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t8-210.webp"
+                  srcset="poker tournament/t8-210.webp 210w, poker tournament/t8-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
               </div>
               <!-- Gradient Overlays -->
@@ -1244,16 +1284,32 @@
               <div class="scroll-track scroll-up" style="--scroll-duration: 22s;">
 
                 <!-- ORIGINAL -->
-                <img src="poker tournament/t9.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t10.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t11.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t12.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t9-210.webp"
+                  srcset="poker tournament/t9-210.webp 210w, poker tournament/t9-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t10-210.webp"
+                  srcset="poker tournament/t10-210.webp 210w, poker tournament/t10-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t11-210.webp"
+                  srcset="poker tournament/t11-210.webp 210w, poker tournament/t11-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t12-210.webp"
+                  srcset="poker tournament/t12-210.webp 210w, poker tournament/t12-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
                 <!-- DUPLICATE (exact same order) -->
-                <img src="poker tournament/t9.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t10.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t11.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t12.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t9-210.webp"
+                  srcset="poker tournament/t9-210.webp 210w, poker tournament/t9-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t10-210.webp"
+                  srcset="poker tournament/t10-210.webp 210w, poker tournament/t10-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t11-210.webp"
+                  srcset="poker tournament/t11-210.webp 210w, poker tournament/t11-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t12-210.webp"
+                  srcset="poker tournament/t12-210.webp 210w, poker tournament/t12-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
               </div>
               <!-- Gradient Overlays -->
@@ -1270,14 +1326,26 @@
               <div class="scroll-track scroll-down" style="--scroll-duration: 18s;">
 
                 <!-- ORIGINAL -->
-                <img src="poker tournament/t13.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t14.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t15.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t13-210.webp"
+                  srcset="poker tournament/t13-210.webp 210w, poker tournament/t13-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t14-210.webp"
+                  srcset="poker tournament/t14-210.webp 210w, poker tournament/t14-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t15-210.webp"
+                  srcset="poker tournament/t15-210.webp 210w, poker tournament/t15-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
                 <!-- DUPLICATE (exact same order) -->
-                <img src="poker tournament/t13.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t14.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
-                <img src="poker tournament/t15.jpg" alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t13-210.webp"
+                  srcset="poker tournament/t13-210.webp 210w, poker tournament/t13-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t14-210.webp"
+                  srcset="poker tournament/t14-210.webp 210w, poker tournament/t14-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
+                <img src="poker tournament/t15-210.webp"
+                  srcset="poker tournament/t15-210.webp 210w, poker tournament/t15-420.webp 420w" sizes="105px"
+                  alt="tournament banner" class="scroll-card mb-3" loading="eager">
 
               </div>
               <!-- Gradient Overlays -->
@@ -1299,8 +1367,13 @@
       class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
       <div class="flex-1 flex justify-center relative">
-        <img src="Webite_Final_PNG/IMG1.png" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none"
-          loading="lazy" />
+        <picture>
+          <source
+            srcset="Webite_Final_PNG/IMG1-520.webp 520w, Webite_Final_PNG/IMG1-1040.webp 1040w"
+            sizes="(max-width: 768px) 90vw, 520px" type="image/webp">
+          <img src="Webite_Final_PNG/IMG1-520.webp" alt="X-Poker APP Download"
+            class="max-w-[520px] w-full select-none" loading="lazy" />
+        </picture>
       </div>
 
       <div class="flex-1 lg:pl-[200px]">
@@ -1464,13 +1537,13 @@
 
                 <!-- Icons from UI/UX team -->
                 <div class="flex justify-center gap-4 mt-12 mb-6">
-                  <img src="Webite_Final_PNG/Icon_简单.png" alt="簡單"
+                  <img src="Webite_Final_PNG/Icon_简单.webp" alt="簡單"
                     class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     loading="lazy" />
-                  <img src="Webite_Final_PNG/Icon_安全.png" alt="安全"
+                  <img src="Webite_Final_PNG/Icon_安全.webp" alt="安全"
                     class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     style="transition-delay: 0.1s;" loading="lazy" />
-                  <img src="Webite_Final_PNG/Icon_可靠.png" alt="可靠"
+                  <img src="Webite_Final_PNG/Icon_可靠.webp" alt="可靠"
                     class="w-20 h-20 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                     style="transition-delay: 0.2s;" loading="lazy" />
                 </div>

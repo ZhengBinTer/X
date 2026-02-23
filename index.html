@@ -669,9 +669,9 @@
         <picture>
           <source
             srcset="Webite_Final_PNG/IMG2-360.webp 360w, Webite_Final_PNG/IMG2-720.webp 720w"
-            sizes="(max-width: 768px) 90vw, 520px" type="image/webp">
+            sizes="(max-width: 768px) 90vw, 620px" type="image/webp">
           <img src="Webite_Final_PNG/IMG2-360.webp" alt="X-Poker App Preview"
-            class="max-w-[520px] w-full select-none" loading="eager" fetchpriority="high" />
+            class="max-w-[640px] w-full select-none" loading="eager" fetchpriority="high" />
         </picture>
       </div>
 
@@ -683,13 +683,21 @@
     <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0">
 
       <div class="text-center mb-12">
-        <h2 class="text-5xl mb-4 font-bold">
+  <h2 class="text-6xl md:text-7xl mb-4 font-bold">
           <span class="text-white">X-Poker</span>
           <span
             style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">俱樂部推薦</span>
         </h2>
         <p class="text-lg text-white/80">不管是新手還是資深玩家，平台提供多種遊戲以及盲注級別供玩家選擇，讓每位玩家都能輕鬆找到最適合自己的桌子。</p>
       </div>
+      <style>
+        .club-card {
+          background: rgba(0, 0, 0, 0.35);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+      </style>
       <!-- Club Cards Grid - Card Style Design -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
@@ -699,7 +707,7 @@
             class="absolute -inset-2 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
           <div
-            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(168,85,247,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+            class="club-card relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(168,85,247,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
@@ -729,7 +737,7 @@
             class="absolute -inset-2 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
           <div
-            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(59,130,246,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+            class="club-card relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(59,130,246,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
@@ -759,7 +767,7 @@
             class="absolute -inset-2 bg-gradient-to-br from-green-500/40 to-emerald-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
           <div
-            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(34,197,94,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+            class="club-card relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(34,197,94,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
@@ -789,7 +797,7 @@
             class="absolute -inset-2 bg-gradient-to-br from-orange-500/40 to-red-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
           <div
-            class="relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(249,115,22,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
+            class="club-card relative bg-black/20 backdrop-blur-md border-0 rounded-2xl p-8 hover:shadow-[0_35px_60px_-15px_rgba(249,115,22,0.4)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)]">
             <div class="flex items-center gap-6">
               <!-- Icon Container -->
               <div class="flex-shrink-0">
@@ -818,78 +826,12 @@
       <!-- More Clubs Button -->
       <div class="mt-8 mb-8 flex justify-center">
         <a href="#" class="inline-block">
-          <div class="animated-btn-container">
-            <button class="animated-btn-rounded">
-              <svg width="220px" height="50px" viewBox="0 0 220 50" class="animated-btn-border">
-                <rect x="1" y="1" width="218" height="48" rx="25" ry="25" class="animated-btn-bg-line" />
-                <rect x="1" y="1" width="218" height="48" rx="25" ry="25" class="animated-btn-hl-line" />
-              </svg>
-              <span>更多俱樂部資訊 →</span>
-            </button>
-          </div>
+          <button
+            class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-8 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
+            更多俱樂部資訊 →
+          </button>
         </a>
       </div>
-
-      <style>
-        .animated-btn-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .animated-btn-rounded {
-          width: 220px;
-          height: 50px;
-          cursor: pointer;
-          background: linear-gradient(to right, #3b82f6, #22d3ee);
-          border: none;
-          border-radius: 25px;
-          outline: none;
-          transition: all 0.5s ease-in-out;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .animated-btn-border {
-          position: absolute;
-          left: 0;
-          top: 0;
-          fill: none;
-          pointer-events: none;
-        }
-
-        .animated-btn-bg-line {
-          stroke: transparent;
-          stroke-width: 2;
-        }
-
-        .animated-btn-hl-line {
-          stroke: #fff;
-          stroke-width: 3;
-          stroke-dasharray: 200 600;
-          stroke-dashoffset: 200;
-          transition: 1s ease-in-out;
-          filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-        }
-
-        .animated-btn-rounded:hover {
-          background: linear-gradient(to right, #2563eb, #06b6d4);
-          box-shadow: 0 10px 25px rgba(34, 211, 238, 0.4);
-          transform: scale(1.05);
-        }
-
-        .animated-btn-rounded:hover .animated-btn-hl-line {
-          stroke-dashoffset: -600;
-        }
-
-        .animated-btn-rounded span {
-          color: white;
-          font-size: 16px;
-          font-weight: 600;
-          position: relative;
-          z-index: 1;
-        }
-      </style>
     </section>
 
     <!-- A sentences between the container/section -->
@@ -904,21 +846,9 @@
     -->
     <!-- A sentences between the container/section -->
 
-    <section id="buy-chips-section" class="container mx-auto px-0 py-0 blob-tl-blue" style="overflow: visible;">
+  <section id="buy-chips-section" class="container mx-auto px-0 py-0" style="overflow: visible;">
 
       <style>
-        /* Buy Chips Section - Small subtle gradient on left side only (like FAQ section) */
-        @media (max-width: 768px) {
-          #buy-chips-section.blob-tl-blue:before {
-            width: 50vw !important;
-            height: 50vw !important;
-            filter: blur(80px) !important;
-            opacity: 0.3 !important;
-            top: 10% !important;
-            left: -30% !important;
-          }
-        }
-
         @keyframes gradientPulse {
 
           0%,
@@ -1364,7 +1294,7 @@
 
     <!-- APP Download Section -->
     <section id="app-download"
-      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
+      class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue">
 
       <div class="flex-1 flex justify-center relative">
         <picture>
@@ -1678,7 +1608,7 @@
     </section>
 
     <!--QNA-Section-->
-    <section class="container mx-auto px-6 lg:px-20 py-24 blob-tl-blue" id="faq" style="padding-bottom: 200px;">
+  <section class="container mx-auto px-6 lg:px-20 py-24 blob-r-blue" id="faq" style="padding-bottom: 200px;">
       <style>
         /* FAQ Section - Extended gradient for seamless overlap with previous section */
         #faq {
@@ -1687,7 +1617,7 @@
         }
 
         /* Adjust blob gradient for smooth continuous transition */
-        #faq.blob-tl-blue:before {
+        #faq.blob-r-blue:after {
           height: 150% !important;
           top: -40% !important;
           opacity: 0.45 !important;
@@ -1695,7 +1625,7 @@
 
         /* Mobile-specific adjustments for FAQ gradient */
         @media (max-width: 768px) {
-          #faq.blob-tl-blue:before {
+          #faq.blob-r-blue:after {
             height: 140% !important;
             top: -30% !important;
             opacity: 0.5 !important;

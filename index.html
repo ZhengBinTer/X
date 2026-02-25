@@ -246,6 +246,68 @@
         }
       }
 
+      /* Motion design helpers */
+      .motion-reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        transition-delay: var(--motion-delay, 0s);
+        will-change: opacity, transform;
+      }
+
+      .motion-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .motion-reveal[data-motion="fade"] {
+        transform: translateY(0);
+      }
+
+      .motion-reveal[data-motion="fade"].is-visible {
+        opacity: 1;
+      }
+
+      .motion-float {
+        animation: motion-float 6s ease-in-out infinite;
+      }
+
+      .motion-float-delayed {
+        animation: motion-float 7s ease-in-out infinite;
+        animation-delay: 1.2s;
+      }
+
+      .motion-hover-lift {
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .motion-hover-lift:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(34, 211, 238, 0.25);
+      }
+
+      @keyframes motion-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .motion-reveal,
+        .motion-float,
+        .motion-float-delayed {
+          animation: none !important;
+          transition: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+
       .search-input {
         width: 100%;
         background: #1a1a1a;
@@ -453,6 +515,31 @@
       });
     </script>
 
+    <!-- Motion reveal observer -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const motionItems = document.querySelectorAll('.motion-reveal');
+        if (!motionItems.length) return;
+
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+            rootMargin: '0px 0px -10% 0px'
+          }
+        );
+
+        motionItems.forEach(item => observer.observe(item));
+      });
+    </script>
+
     <!-- Sticky Floating Customer Service Button -->
     <a href="https://lin.ee/MWsYX7D" target="_blank" class="line-cs-button">
       <div class="line-cs-container">
@@ -607,7 +694,7 @@
     <section
       class="container mx-auto px-6 lg:px-20 pt-8 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
-      <div class="flex-1">
+  <div class="flex-1 motion-reveal" style="--motion-delay: 0.05s;">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight">
           提升你的
           <span class="block mt-4"
@@ -703,7 +790,7 @@
 
       </div>
 
-      <div class="flex-1 flex justify-center relative">
+  <div class="flex-1 flex justify-center relative motion-reveal motion-float" style="--motion-delay: 0.15s;">
         <picture>
           <source
             srcset="Webite_Final_PNG/IMG2-360.webp 360w, Webite_Final_PNG/IMG2-720.webp 720w"
@@ -720,7 +807,7 @@
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
     <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0">
 
-      <div class="text-center mb-12">
+  <div class="text-center mb-12 motion-reveal" style="--motion-delay: 0.05s;">
   <h2 class="text-6xl md:text-7xl mb-4 font-bold">
           <span class="text-white">X-Poker</span>
           <span
@@ -740,7 +827,7 @@
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
         <!-- Club Card 1: 泡泡軟糖 -->
-        <div class="group relative">
+  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.1s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -770,7 +857,7 @@
         </div>
 
         <!-- Club Card 2: Baby Sharks -->
-        <div class="group relative">
+  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.2s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -800,7 +887,7 @@
         </div>
 
         <!-- Club Card 3: M.P.C -->
-        <div class="group relative">
+  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.3s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-green-500/40 to-emerald-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -830,7 +917,7 @@
         </div>
 
         <!-- Club Card 4: Variance Rider -->
-        <div class="group relative">
+  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.4s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-orange-500/40 to-red-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -1012,7 +1099,7 @@
         }
       </style>
 
-      <div class="container mt-12 text-center mx-auto py-12">
+  <div class="container mt-12 text-center mx-auto py-12">
         <div class="max-w-2xl mx-auto">
           <h2>
             <!-- X-POKER 主標 -->
@@ -1082,7 +1169,7 @@
       <div class="container mx-auto px-4">
 
         <!-- Section Header -->
-        <div class="text-center mb-16">
+  <div class="text-center mb-16 motion-reveal" style="--motion-delay: 0.05s;">
           <h2 class="text-5xl mb-4 font-bold">
             <span class="text-white">X-Poker</span>
             <span class="gradient-text-cyan">
@@ -1101,7 +1188,7 @@
           <div class="hidden lg:block"></div>
 
           <!-- NLH -->
-          <div class="game-card -translate-x-20 teal">
+          <div class="game-card -translate-x-20 teal motion-reveal motion-hover-lift" style="--motion-delay: 0.1s;">
             <div class="flex justify-center mb-6">
               <img src="Webite_Final_PNG/Game_NLH.webp" class="h-32 w-auto" alt="NLH" loading="lazy">
             </div>
@@ -1112,7 +1199,7 @@
           </div>
 
           <!-- PLO -->
-          <div class="game-card yellow">
+          <div class="game-card yellow motion-reveal motion-hover-lift" style="--motion-delay: 0.2s;">
             <div class="flex justify-center items-center mb-6 h-32 gap-1 overflow-hidden px-2">
               <img src="Webite_Final_PNG/Game_PLO4.webp" class="h-16 w-auto max-w-[30%] object-contain" alt="PLO4"
                 loading="lazy">
@@ -1128,7 +1215,7 @@
           </div>
 
           <!-- Maubinh -->
-          <div class="game-card translate-x-20 green">
+          <div class="game-card translate-x-20 green motion-reveal motion-hover-lift" style="--motion-delay: 0.3s;">
             <div class="flex justify-center mb-6">
               <img src="Webite_Final_PNG/Game_十三支.webp" class="h-32 w-auto" alt="Maubinh" loading="lazy">
             </div>
@@ -1139,7 +1226,7 @@
           </div>
 
           <!-- OFC -->
-          <div class="game-card -translate-x-20 blue">
+          <div class="game-card -translate-x-20 blue motion-reveal motion-hover-lift" style="--motion-delay: 0.15s;">
             <div class="flex justify-center mb-6">
               <img src="Webite_Final_PNG/Game_OFC.webp" class="h-32 w-auto" alt="OFC" loading="lazy">
             </div>
@@ -1150,7 +1237,7 @@
           </div>
 
           <!-- AOF -->
-          <div class="game-card red">
+          <div class="game-card red motion-reveal motion-hover-lift" style="--motion-delay: 0.25s;">
             <div class="flex justify-center mb-6">
               <img src="Webite_Final_PNG/Game_AOF.webp" class="h-32 w-auto" alt="AOF" loading="lazy">
             </div>
@@ -1161,7 +1248,7 @@
           </div>
 
           <!-- 6+ Short Deck -->
-          <div class="game-card translate-x-20 orange">
+          <div class="game-card translate-x-20 orange motion-reveal motion-hover-lift" style="--motion-delay: 0.35s;">
             <div class="flex justify-center mb-6">
               <img src="Webite_Final_PNG/Game_6+.webp" class="h-32 w-auto" alt="Short Deck" loading="lazy">
             </div>
@@ -1334,7 +1421,7 @@
     <section id="app-download"
       class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue">
 
-      <div class="flex-1 flex justify-center relative">
+  <div class="flex-1 flex justify-center relative motion-reveal motion-float-delayed" style="--motion-delay: 0.1s;">
         <picture>
           <source
             srcset="Webite_Final_PNG/IMG1-520.webp 520w, Webite_Final_PNG/IMG1-1040.webp 1040w"
@@ -1344,7 +1431,7 @@
         </picture>
       </div>
 
-      <div class="flex-1 lg:pl-[200px]">
+  <div class="flex-1 lg:pl-[200px] motion-reveal" style="--motion-delay: 0.2s;">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-center lg:text-left">
           APP <span class="text-gradient blue">下載</span>
         </h2>
@@ -1444,7 +1531,7 @@
     <section class="relative py-24 overflow-hidden" id="why-us">
 
       <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 class="text-center text-5xl font-bold mb-20 animate-fade-in-down">
+  <h2 class="text-center text-5xl font-bold mb-20 animate-fade-in-down motion-reveal" style="--motion-delay: 0.05s;">
           <span class="text-gray-300">為什麼</span><span class="gradient-text-cyan">選擇我們</span><span
             class="text-gray-300">？</span>
         </h2>
@@ -1456,7 +1543,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
             <!-- Card 1 - Professional Support -->
-            <div class="why-us-card" style="animation-delay: 0.1s;">
+            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.1s; --motion-delay: 0.1s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1492,7 +1579,7 @@
             </div>
 
             <!-- Card 2 - Simple, Safe, Reliable (with UI/UX team images) -->
-            <div class="why-us-card" style="animation-delay: 0.2s;">
+            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.2s; --motion-delay: 0.2s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1529,7 +1616,7 @@
             </div>
 
             <!-- Card 3 - All Platforms -->
-            <div class="why-us-card" style="animation-delay: 0.3s;">
+            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.3s; --motion-delay: 0.3s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1569,7 +1656,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
             <!-- Card 4 - Leading Platform -->
-            <div class="why-us-card" style="animation-delay: 0.4s;">
+            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.4s; --motion-delay: 0.2s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1604,7 +1691,7 @@
             </div>
 
             <!-- Card 5 - Easy Deposit -->
-            <div class="why-us-card" style="animation-delay: 0.5s;">
+            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.5s; --motion-delay: 0.3s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1679,7 +1766,7 @@
         }
       </style>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="col-span-1">
+  <div class="col-span-1 motion-reveal" style="--motion-delay: 0.05s;">
           <div class="w-full lg:w-3/4">
             <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
               <span class="gradient-text-cyan">常見問題</span><br />(FAQ)
@@ -1697,7 +1784,7 @@
           </div>
         </div>
 
-        <div class="col-span-1 lg:col-span-2 lg:pl-12">
+  <div class="col-span-1 lg:col-span-2 lg:pl-12 motion-reveal" style="--motion-delay: 0.15s;">
           <dl class="divide-y divide-zinc-700">
             <details class="group py-4">
               <summary

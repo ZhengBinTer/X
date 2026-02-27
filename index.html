@@ -287,6 +287,7 @@
       }
 
       @keyframes motion-float {
+
         0%,
         100% {
           transform: translateY(0);
@@ -298,6 +299,7 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
+
         .motion-reveal,
         .motion-float,
         .motion-float-delayed {
@@ -374,8 +376,8 @@
             <a class="inline-block cursor-pointer" id="header-icon-natural8" href="#">
               <picture>
                 <source srcset="Xpoker_image/Xpoker_Logo.webp" type="image/webp">
-                <img src="Xpoker_image/Xpoker_Logo.webp" alt="Natural8 logo" class="h-8 w-auto sm:h-10"
-                  loading="eager" fetchpriority="high">
+                <img src="Xpoker_image/Xpoker_Logo.webp" alt="Natural8 logo" class="h-8 w-auto sm:h-10" loading="eager"
+                  fetchpriority="high">
               </picture>
             </a>
           </div>
@@ -536,7 +538,6 @@
       document.addEventListener('DOMContentLoaded', function() {
         const motionItems = document.querySelectorAll('.motion-reveal');
         if (!motionItems.length) return;
-
         const observer = new IntersectionObserver(
           entries => {
             entries.forEach(entry => {
@@ -545,19 +546,17 @@
                 observer.unobserve(entry.target);
               }
             });
-          },
-          {
+          }, {
             threshold: 0.15,
             rootMargin: '0px 0px -10% 0px'
           }
         );
-
         motionItems.forEach(item => observer.observe(item));
       });
     </script>
 
     <!-- Sticky Floating Customer Service Button -->
-  <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer" class="line-cs-button">
+    <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer" class="line-cs-button">
       <div class="line-cs-container">
         <div class="line-cs-text">需要小編協助嗎？</div>
         <div class="line-cs-icon-wrapper">
@@ -710,7 +709,7 @@
     <section
       class="container mx-auto px-6 lg:px-20 pt-8 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue blob-r-blue">
 
-  <div class="flex-1 motion-reveal" style="--motion-delay: 0.05s;">
+      <div class="flex-1 motion-reveal" style="--motion-delay: 0.05s;">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight">
           提升你的
           <span class="block mt-4"
@@ -723,21 +722,24 @@
           X-Poker 是最熱門的線上德州撲克平台，提供 24 小時桌況與真人對決，並提供專 業客服支援，協助玩家在遊戲過程中獲得支援，帶來穩定且公平的遊戲體驗。熱血對決，等您來挑戰！
         </p>
 
-  <div class="hero-cta-row mt-10 mb-8 md:mb-0 flex flex-wrap justify-start gap-3 md:gap-4">
+        <div class="hero-cta-row mt-10 mb-8 md:mb-0 flex flex-wrap justify-start gap-3 md:gap-4">
           <a href="#club-section" class="inline-block">
-            <button class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
+            <button
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
               俱樂部推薦
             </button>
           </a>
 
           <a href="#buy-chips-section" class="inline-block">
-            <button class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
+            <button
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
               儲值教學
             </button>
           </a>
 
           <a href="#app-download" class="inline-block">
-            <button class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
+            <button
+              class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-6 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
               APP下載
             </button>
           </a>
@@ -806,13 +808,12 @@
 
       </div>
 
-  <div class="flex-1 flex justify-center relative motion-reveal motion-float" style="--motion-delay: 0.15s;">
+      <div class="flex-1 flex justify-center relative motion-reveal motion-float" style="--motion-delay: 0.15s;">
         <picture>
-          <source
-            srcset="Webite_Final_PNG/IMG2-360.webp 360w, Webite_Final_PNG/IMG2-720.webp 720w"
+          <source srcset="Webite_Final_PNG/IMG2-360.webp 360w, Webite_Final_PNG/IMG2-720.webp 720w"
             sizes="(max-width: 768px) 90vw, 620px" type="image/webp">
-          <img src="Webite_Final_PNG/IMG2-360.webp" alt="X-Poker App Preview"
-            class="max-w-[640px] w-full select-none" loading="eager" fetchpriority="high" />
+          <img src="Webite_Final_PNG/IMG2-360.webp" alt="X-Poker App Preview" class="max-w-[640px] w-full select-none"
+            loading="eager" fetchpriority="high" />
         </picture>
       </div>
 
@@ -823,8 +824,8 @@
     <!-- X-POKER 俱樂部推薦排名 Section (First full-width, 2nd & 3rd side-by-side) -->
     <section id="club-section" class="container mx-auto px-6 lg:px-20 pb-0">
 
-  <div class="text-center mb-12 motion-reveal" style="--motion-delay: 0.05s;">
-  <h2 class="text-6xl md:text-7xl mb-4 font-bold">
+      <div class="text-center mb-12 motion-reveal" style="--motion-delay: 0.05s;">
+        <h2 class="text-6xl md:text-7xl mb-4 font-bold">
           <span class="text-white">X-Poker</span>
           <span
             style="background: linear-gradient(to right, #60a5fa, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">俱樂部推薦</span>
@@ -843,7 +844,7 @@
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
         <!-- Club Card 1: 泡泡軟糖 -->
-  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.1s;">
+        <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.1s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -873,7 +874,7 @@
         </div>
 
         <!-- Club Card 2: Baby Sharks -->
-  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.2s;">
+        <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.2s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -903,7 +904,7 @@
         </div>
 
         <!-- Club Card 3: M.P.C -->
-  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.3s;">
+        <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.3s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-green-500/40 to-emerald-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -933,7 +934,7 @@
         </div>
 
         <!-- Club Card 4: Variance Rider -->
-  <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.4s;">
+        <div class="group relative motion-reveal motion-hover-lift" style="--motion-delay: 0.4s;">
           <div
             class="absolute -inset-2 bg-gradient-to-br from-orange-500/40 to-red-500/40 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
@@ -966,7 +967,7 @@
 
       <!-- More Clubs Button -->
       <div class="mt-8 mb-8 flex justify-center">
-  <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer" class="inline-block">
           <button
             class="nav-animated-btn relative bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 rounded-full px-8 py-3 text-sm text-white font-normal transition duration-200 z-10 overflow-hidden whitespace-nowrap">
             更多俱樂部資訊 →
@@ -987,7 +988,7 @@
     -->
     <!-- A sentences between the container/section -->
 
-  <section id="buy-chips-section" class="container mx-auto px-0 py-0" style="overflow: visible;">
+    <section id="buy-chips-section" class="container mx-auto px-0 py-0" style="overflow: visible;">
 
       <style>
         @keyframes gradientPulse {
@@ -1115,7 +1116,7 @@
         }
       </style>
 
-  <div class="container mt-12 text-center mx-auto py-12">
+      <div class="container mt-12 text-center mx-auto py-12">
         <div class="max-w-2xl mx-auto">
           <h2>
             <!-- X-POKER 主標 -->
@@ -1185,7 +1186,7 @@
       <div class="container mx-auto px-4">
 
         <!-- Section Header -->
-  <div class="text-center mb-16 motion-reveal" style="--motion-delay: 0.05s;">
+        <div class="text-center mb-16 motion-reveal" style="--motion-delay: 0.05s;">
           <h2 class="text-5xl mb-4 font-bold">
             <span class="text-white">X-Poker</span>
             <span class="gradient-text-cyan">
@@ -1295,7 +1296,8 @@
             <p class="max-w-2xl mb-6 text-base text-white/90 leading-relaxed">
               X-Poker 錦標賽提供每日多場不同的比賽，每位玩家有固定籌碼，輸光即淘汰，最後一人贏光所有籌碼成為冠軍！比賽節奏快、玩法多、獎勵豐厚，隨時都能挑戰自己的策略和技 巧，享受公平又精彩的撲克對決！
             </p>
-            <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer" class="inline-block w-full lg:w-auto">
+            <a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
+              class="inline-block w-full lg:w-auto">
               <button
                 class="nav-animated-btn relative bg-gradient-to-r from-blue-700 to-blue-700 rounded-full px-6 py-3 text-zinc-200 transition duration-200 z-10 overflow-hidden">
                 查看所有錦標賽
@@ -1437,17 +1439,16 @@
     <section id="app-download"
       class="container mx-auto px-6 lg:px-20 pt-24 pb-32 text-white flex flex-col lg:flex-row items-center gap-16 blob-tl-blue">
 
-  <div class="flex-1 flex justify-center relative motion-reveal motion-float-delayed" style="--motion-delay: 0.1s;">
+      <div class="flex-1 flex justify-center relative motion-reveal motion-float-delayed" style="--motion-delay: 0.1s;">
         <picture>
-          <source
-            srcset="Webite_Final_PNG/IMG1-520.webp 520w, Webite_Final_PNG/IMG1-1040.webp 1040w"
+          <source srcset="Webite_Final_PNG/IMG1-520.webp 520w, Webite_Final_PNG/IMG1-1040.webp 1040w"
             sizes="(max-width: 768px) 90vw, 520px" type="image/webp">
-          <img src="Webite_Final_PNG/IMG1-520.webp" alt="X-Poker APP Download"
-            class="max-w-[520px] w-full select-none" loading="lazy" />
+          <img src="Webite_Final_PNG/IMG1-520.webp" alt="X-Poker APP Download" class="max-w-[520px] w-full select-none"
+            loading="lazy" />
         </picture>
       </div>
 
-  <div class="flex-1 lg:pl-[200px] motion-reveal" style="--motion-delay: 0.2s;">
+      <div class="flex-1 lg:pl-[200px] motion-reveal" style="--motion-delay: 0.2s;">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-center lg:text-left">
           APP <span class="text-gradient blue">下載</span>
         </h2>
@@ -1471,7 +1472,7 @@
             </div>
           </a>
 
-          <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641" target="_blank"
+          <a href="https://github.com/ZhengBinTer/X/releases/download/v1.12.71.0/X-Poker1.12.71.0.apk" target="_blank"
             rel="nofollow" class="inline-block">
             <div
               class="slide-button relative bg-white rounded-lg px-6 py-4 text-blue-600 transition duration-300 group overflow-hidden">
@@ -1485,7 +1486,7 @@
             </div>
           </a>
 
-          <a href="https://static.x-game.net/version/website/X-Poker8.0.msi?t=1702934641" target="_blank" rel="nofollow"
+          <a href="https://github.com/ZhengBinTer/X/releases/download/9.0/X-Poker9.0.msi" target="_blank" rel="nofollow"
             class="inline-block">
             <div
               class="slide-button relative bg-white rounded-lg px-6 py-4 text-blue-600 transition duration-300 group overflow-hidden">
@@ -1547,7 +1548,8 @@
     <section class="relative py-24 overflow-hidden" id="why-us">
 
       <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
-  <h2 class="text-center text-5xl font-bold mb-20 animate-fade-in-down motion-reveal" style="--motion-delay: 0.05s;">
+        <h2 class="text-center text-5xl font-bold mb-20 animate-fade-in-down motion-reveal"
+          style="--motion-delay: 0.05s;">
           <span class="text-gray-300">為什麼</span><span class="gradient-text-cyan">選擇我們</span><span
             class="text-gray-300">？</span>
         </h2>
@@ -1559,7 +1561,8 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
             <!-- Card 1 - Professional Support -->
-            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.1s; --motion-delay: 0.1s;">
+            <div class="why-us-card motion-reveal motion-hover-lift"
+              style="animation-delay: 0.1s; --motion-delay: 0.1s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1595,7 +1598,8 @@
             </div>
 
             <!-- Card 2 - Simple, Safe, Reliable (with UI/UX team images) -->
-            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.2s; --motion-delay: 0.2s;">
+            <div class="why-us-card motion-reveal motion-hover-lift"
+              style="animation-delay: 0.2s; --motion-delay: 0.2s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1632,7 +1636,8 @@
             </div>
 
             <!-- Card 3 - All Platforms -->
-            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.3s; --motion-delay: 0.3s;">
+            <div class="why-us-card motion-reveal motion-hover-lift"
+              style="animation-delay: 0.3s; --motion-delay: 0.3s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1672,7 +1677,8 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
             <!-- Card 4 - Leading Platform -->
-            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.4s; --motion-delay: 0.2s;">
+            <div class="why-us-card motion-reveal motion-hover-lift"
+              style="animation-delay: 0.4s; --motion-delay: 0.2s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1707,7 +1713,8 @@
             </div>
 
             <!-- Card 5 - Easy Deposit -->
-            <div class="why-us-card motion-reveal motion-hover-lift" style="animation-delay: 0.5s; --motion-delay: 0.3s;">
+            <div class="why-us-card motion-reveal motion-hover-lift"
+              style="animation-delay: 0.5s; --motion-delay: 0.3s;">
               <div
                 class="bg-black/90 border-2 border-blue-500/60 rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
                 <!-- Top Badge -->
@@ -1749,7 +1756,7 @@
     </section>
 
     <!--QNA-Section-->
-  <section class="container mx-auto px-6 lg:px-20 py-24 blob-r-blue" id="faq" style="padding-bottom: 200px;">
+    <section class="container mx-auto px-6 lg:px-20 py-24 blob-r-blue" id="faq" style="padding-bottom: 200px;">
       <style>
         /* FAQ Section - Extended gradient for seamless overlap with previous section */
         #faq {
@@ -1782,7 +1789,7 @@
         }
       </style>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-  <div class="col-span-1 motion-reveal" style="--motion-delay: 0.05s;">
+        <div class="col-span-1 motion-reveal" style="--motion-delay: 0.05s;">
           <div class="w-full lg:w-3/4">
             <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
               <span class="gradient-text-cyan">常見問題</span><br />(FAQ)
@@ -1800,7 +1807,7 @@
           </div>
         </div>
 
-  <div class="col-span-1 lg:col-span-2 lg:pl-12 motion-reveal" style="--motion-delay: 0.15s;">
+        <div class="col-span-1 lg:col-span-2 lg:pl-12 motion-reveal" style="--motion-delay: 0.15s;">
           <dl class="divide-y divide-zinc-700">
             <details class="group py-4">
               <summary
@@ -1813,7 +1820,7 @@
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
-        <p>聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
+                <p>聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
                     class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>索取俱樂部資訊並且告知客服人員<span
                     class="gradient-text-cyan font-semibold">遊戲ID</span>即可通過申請～</p>
               </div>
@@ -1845,7 +1852,7 @@
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
-        <p>請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
+                <p>請聯繫<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
                     class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a>協助您解決此問題～
                 </p>
               </div>
@@ -1862,7 +1869,7 @@
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
-        <p>對的喔～俱樂部裡面的桌子是需要向<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
+                <p>對的喔～俱樂部裡面的桌子是需要向<a href="https://lin.ee/MWsYX7D" target="_blank" rel="noopener noreferrer"
                     class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">客服</a><span
                     class="gradient-text-cyan font-semibold">購買籌碼</span>才能開始遊戲～</p>
               </div>
@@ -1895,10 +1902,10 @@
                 </svg>
               </summary>
               <div class="py-6 text-white/70 leading-relaxed">
-                <p>您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447"
+        <p>您只需要前往 <a href="https://apps.apple.com/us/app/x-poker-poker-with-friends/id1534470447"
                     target="_blank"
                     class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">App
-                    Store</a> 或 <a href="https://static.x-game.net/version/website/X-Poker1.12.23.0.apk?t=1702934641"
+          Store</a> 或 <a href="https://github.com/ZhengBinTer/X/releases/download/v1.12.71.0/X-Poker1.12.71.0.apk"
                     target="_blank"
                     class="gradient-text-cyan font-semibold underline hover:text-cyan-300 transition-colors">Google
                     Play</a> 下載 <span class="gradient-text-cyan font-semibold">Xpoker</span>，安裝後依照指示填寫基本資料即可完成<span
@@ -1919,14 +1926,14 @@
 
       <p class="text-zinc-400 text-sm mt-6 mb-4">
         愛玩多玩 還要玩 想贏錢 就來 X-Poker 線上德州撲克平台！
-      違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
-    </p>
+        違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
+      </p>
 
-    <p class="text-zinc-400 text-sm">
-      Copyright © 2024 X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
-    </p>
-  </div>
-</footer>
+      <p class="text-zinc-400 text-sm">
+        Copyright © 2024 X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
+      </p>
+    </div>
+  </footer>
 
 </body>
 

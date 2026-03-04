@@ -671,6 +671,7 @@ section {
 
 .line-clamp {
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden
@@ -959,6 +960,7 @@ input:where([type=button]),
 input:where([type=reset]),
 input:where([type=submit]) {
   -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none
 }
@@ -982,6 +984,7 @@ progress {
 
 [type=search] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px
 }
 
@@ -1069,7 +1072,6 @@ object,
 svg,
 video {
   display: block;
-  vertical-align: middle
 }
 
 img,
@@ -6908,6 +6910,7 @@ p>a {
 @media (min-width: 768px) and (max-width: 1023px) {
   #tournaments .relative.h-\[650px\] {
     height: 500px !important;
+    ·
   }
 
   #tournaments .h-full.px-6 {
@@ -6920,6 +6923,7 @@ p>a {
     line-height: 2.5rem !important;
   }
 }
+
 /* ====== INLINE STYLES MOVED FROM INDEX.HTML ====== */
 /* Global Fix - Prevent Horizontal Scroll */
 html,

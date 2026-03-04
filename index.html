@@ -185,12 +185,13 @@
               if (targetId === '#navigation-header') {
                 // Scroll to very top of the page
                 scrollToPosition = 0;
-              } else if (targetId === '#buy-chips-section' && !isMobile) {
-                // Center the section in the viewport (desktop only)
-                scrollToPosition = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
+              } else if (targetId === '#buy-chips-section') {
+                // For this specific section on mobile, we likely need to be at the top
+                // Since this section has negative margins/blobs, just placing it below header works better
+                scrollToPosition = absoluteElementTop - headerHeight;
               } else {
-                // Default: position just below header (mobile always uses this)
-                const offset = isMobile ? headerHeight + 20 : headerHeight - 30;
+                // Default: position just below header
+                const offset = headerHeight;
                 scrollToPosition = absoluteElementTop - offset;
               }
               window.scrollTo({

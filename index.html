@@ -95,9 +95,7 @@
                     <a class="text-xs xl:text-sm hover:text-gray-300 cursor-pointer" id="header-link-app-index"
                       href="#app-download">App 下載</a>
                   </li>
-                  <li class="inline-block with-dropdown">
-                    <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer" href="#">遊戲技巧</a>
-                  </li>
+
                   <li class="inline-block with-dropdown">
                     <a class="subheader-button text-xs xl:text-sm hover:text-gray-300 cursor-pointer"
                       id="header-link-clubs-index" href="#club-section">平台推薦</a>
@@ -143,7 +141,7 @@
           <a href="#navigation-header" class="mobile-link">首頁 <span class="arrow-icon">›</span></a>
           <a href="#buy-chips-section" class="mobile-link">出入金教學 <span class="arrow-icon">›</span></a>
           <a href="#app-download" class="mobile-link">App 下載 <span class="arrow-icon">›</span></a>
-          <a href="#" class="mobile-link">遊戲技巧 <span class="arrow-icon">›</span></a>
+
           <a href="#club-section" class="mobile-link">平台推薦 <span class="arrow-icon">›</span></a>
           <a href="#game-types-section" class="mobile-link">遊戲種類 <span class="arrow-icon">›</span></a>
           <a href="#faq" class="mobile-link">常見問題 <span class="arrow-icon">›</span></a>
@@ -197,13 +195,18 @@
               }
               window.scrollTo({
                 top: scrollToPosition,
-                behavior: 'smooth'
+                behavior: isMobile ? 'auto' : 'smooth'
               });
               // Close mobile menu if open
               const mobileMenu = document.getElementById('mobile-menu');
               if (mobileMenu && mobileMenu.classList.contains('active')) {
                 mobileMenu.classList.remove('active');
                 document.body.classList.remove('no-scroll');
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                document.body.style.left = '';
+                document.body.style.right = '';
                 document.getElementById('menu-icon').classList.remove('hidden');
                 document.getElementById('close-icon').classList.add('hidden');
               }
@@ -251,18 +254,7 @@
       });
     </script>
 
-    <!-- Sticky Floating Customer Service Button -->
-    <a href="https://lin.ee/MWsYX7D" rel="noopener noreferrer" class="line-cs-button">
-      <div class="line-cs-container">
-        <div class="line-cs-text">需要小編協助嗎？</div>
-        <div class="line-cs-icon-wrapper">
-          <img src="Webite_Final_PNG/LINE_APP_Android-32.webp"
-            srcset="Webite_Final_PNG/LINE_APP_Android-32.webp 32w, Webite_Final_PNG/LINE_APP_Android-64.webp 64w"
-            sizes="32px" alt="LINE" class="line-cs-icon" loading="lazy" />
-          <span class="line-cs-badge">1</span>
-        </div>
-      </div>
-    </a>
+
 
     <style>
       .line-cs-button {
@@ -1641,6 +1633,19 @@
   </footer>
 
   <script>document.getElementById("current-year").textContent = new Date().getFullYear();</script>
+
+  <!-- Sticky Floating Customer Service Button -->
+  <a href="https://lin.ee/MWsYX7D" rel="noopener noreferrer" class="line-cs-button">
+    <div class="line-cs-container">
+      <div class="line-cs-text">需要小編協助嗎？</div>
+      <div class="line-cs-icon-wrapper">
+        <img src="Webite_Final_PNG/LINE_APP_Android-32.webp"
+          srcset="Webite_Final_PNG/LINE_APP_Android-32.webp 32w, Webite_Final_PNG/LINE_APP_Android-64.webp 64w"
+          sizes="32px" alt="LINE" class="line-cs-icon" loading="lazy" />
+        <span class="line-cs-badge">1</span>
+      </div>
+    </div>
+  </a>
 </body>
 
 </html>

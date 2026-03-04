@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
         }
-        
+
         const isActive = mobileMenu.classList.contains('active');
-        
+
         if (isActive) {
             // Close menu - restore scroll position
             mobileMenu.classList.remove('active');
@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.width = '';
             body.style.left = '';
             body.style.right = '';
-            
+
             // Use requestAnimationFrame to ensure DOM is updated before scrolling
             requestAnimationFrame(() => {
                 window.scrollTo(0, scrollPosition);
             });
-            
+
             if (menuIcon && closeIcon) {
                 menuIcon.classList.remove('hidden');
                 closeIcon.classList.add('hidden');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('no-scroll');
             body.style.top = `-${scrollPosition}px`;
             mobileMenu.classList.add('active');
-            
+
             if (menuIcon && closeIcon) {
                 menuIcon.classList.add('hidden');
                 closeIcon.classList.remove('hidden');
@@ -57,40 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners
     menuToggle.addEventListener('click', toggleMenu);
-    
+
     // Close button inside menu
     if (mobileCloseBtn) {
         mobileCloseBtn.addEventListener('click', toggleMenu);
     }
 
-    // Close menu when clicking a link - DON'T preventDefault, let smooth scroll handle it
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (mobileMenu.classList.contains('active')) {
-                // Close menu immediately
-                mobileMenu.classList.remove('active');
-                body.classList.remove('no-scroll');
-                body.style.position = '';
-                body.style.top = '';
-                body.style.width = '';
-                body.style.left = '';
-                body.style.right = '';
-                
-                // Restore scroll position immediately
-                window.scrollTo(0, scrollPosition);
-                
-                // Toggle icons
-                if (menuIcon && closeIcon) {
-                    menuIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
-                }
-                
-                // Let the smooth scroll script in HTML handle the navigation
-                // (Don't call e.preventDefault() here)
-            }
-        });
-    });
+    // Let index.html "Smooth Scroll" script handle mobile-link clicks.
 
     // Ensure scroll is not locked on page load or resize
     const ensureScrollEnabled = () => {
@@ -108,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', ensureScrollEnabled);
     document.addEventListener('visibilitychange', ensureScrollEnabled);
     window.addEventListener('pageshow', ensureScrollEnabled);
-    
+
     // Initial check - CRITICAL for preventing scroll lock on load
     ensureScrollEnabled();
-    
+
     // Double-check after a brief delay to catch any late-loading issues
     setTimeout(ensureScrollEnabled, 50);
     setTimeout(ensureScrollEnabled, 200);

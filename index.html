@@ -1528,7 +1528,7 @@
     </section>
 
     <!--QNA-Section-->
-    <section class="container mx-auto px-6 lg:px-20 py-24 blob-r-blue" id="faq" style="padding-bottom: 200px;">
+    <section class="container mx-auto px-6 lg:px-20 py-24 blob-r-blue" id="faq">
       <style>
         /* FAQ Section - Extended gradient for seamless overlap with previous section */
         #faq {
@@ -1538,28 +1538,28 @@
 
         /* Adjust blob gradient for smooth continuous transition */
         #faq.blob-r-blue:after {
-          width: 1400px !important;
-          height: 1400px !important;
-          right: -450px !important;
-          top: -350px !important;
+          width: 1600px !important;
+          height: 1600px !important;
+          right: -800px !important;
+          top: -400px !important;
           bottom: auto !important;
           margin: 0 !important;
           aspect-ratio: auto !important;
-          filter: blur(220px) !important;
+          filter: blur(250px) !important;
           opacity: 0.6 !important;
         }
 
         /* Mobile-specific adjustments for FAQ gradient */
         @media (max-width: 768px) {
           #faq.blob-r-blue:after {
-            width: 180vw !important;
-            height: 180vw !important;
-            right: -40vw !important;
+            width: 200vw !important;
+            height: 200vw !important;
+            right: -100vw !important;
             top: -30vw !important;
             bottom: auto !important;
             margin: 0 !important;
             aspect-ratio: auto !important;
-            filter: blur(180px) !important;
+            filter: blur(200px) !important;
             opacity: 0.55 !important;
           }
         }
@@ -1701,23 +1701,23 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-transparent py-6 mt-auto relative z-10">
+      <div class="container mx-auto text-center">
+        <p class="font-semibold text-white">免責聲明</p>
+
+        <p class="text-zinc-400 text-sm mt-6 mb-4">
+          全台最熱門線上德州撲克就在這裡，24小時全天候火熱桌況以及每日錦標賽真人玩家對決，安全 公平 簡單的操作頁面 讓你輕鬆上手！<br>
+          違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
+        </p>
+
+        <p class="text-zinc-400 text-sm">
+          Copyright © <span id="current-year">2024</span> X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
+        </p>
+      </div>
+    </footer>
+
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-transparent py-6 mt-auto relative z-10" style="margin-top: -150px;">
-    <div class="container mx-auto text-center">
-      <p class="font-semibold text-white">免責聲明</p>
-
-      <p class="text-zinc-400 text-sm mt-6 mb-4">
-        全台最熱門線上德州撲克就在這裡，24小時全天候火熱桌況以及每日錦標賽真人玩家對決，安全 公平 簡單的操作頁面 讓你輕鬆上手！<br>
-        違反我們的 <a href="https://x-poker.net/#/termsofservice" class="underline">條款和條件</a> 可能會導致您的帳戶受到限制。
-      </p>
-
-      <p class="text-zinc-400 text-sm">
-        Copyright © <span id="current-year">2024</span> X-Poker線上德州撲克 | 台灣德州撲克俱樂部推薦！ | Powered by X-Poker
-      </p>
-    </div>
-  </footer>
 
   <script>document.getElementById("current-year").textContent = new Date().getFullYear();</script>
 

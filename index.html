@@ -384,14 +384,19 @@
         }
       }
 
-      /* Hide text on very small screens to prevent overflow */
+      /* Keep text visible on very small screens while avoiding overflow */
       @media (max-width: 480px) {
         .line-cs-text {
-          display: none;
+          display: block;
+          font-size: 12px;
+          padding: 8px 12px;
+          max-width: calc(100vw - 120px);
+          white-space: normal;
+          line-height: 1.2;
         }
 
         .line-cs-container {
-          gap: 0;
+          gap: 8px;
         }
       }
 
